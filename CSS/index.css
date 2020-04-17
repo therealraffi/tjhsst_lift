@@ -1,0 +1,241 @@
+body{
+    background: white;
+    position:relative;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+.main{
+    position: relative;
+    background-color:white;
+    z-index: -2;
+}
+.mline{
+    margin: 7vh 0 0 0;
+    border: 0;
+    text-align: center;
+}
+
+.mline::before {
+    content: "\2022 \ \2022 \ \2022 \ \2022 \ \2022";
+    font-size: 50px;
+    color: rgb(202, 93, 79);
+  }
+
+.navigation{
+    position:fixed;
+    top:0;
+    overflow: hidden;
+    width:100%;
+    height: 7vh;
+    padding-right: 8vh;
+    z-index: 1;
+}
+
+.navigation a {
+    float: right;
+    padding: 15px 30px;
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+}
+
+.navigation:hover {
+    background-color:white;
+}
+
+.navigation:hover a{
+    color:black;
+}
+
+.navigation a:hover{
+    color: rgb(140, 180, 255)
+}
+
+.logo{
+    cursor: pointer;
+    height: 3.8vh;
+    position: absolute;
+    left: 2vh;
+    vertical-align: center;
+}
+
+.active {
+   color:rgb(140, 180, 255);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.banner img{
+    position: fixed;
+    filter: brightness(75%);
+    top:0;
+    right:0;
+    bottom: 0;
+    display:block;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: -3;
+}
+.title{
+    position: absolute;
+    top: 5vh;
+    left: 20vh;
+}
+
+.title p{
+    color: rgb(255, 255, 255);
+}
+
+#title-p{
+    font-size:12vh;
+    margin-bottom: 0;
+    padding:0;
+    font-family: 'sans-serif';
+}
+
+#mission{
+    font-size:4vh;
+    font-style: italic;
+    font-family: 'Segoe UI';
+}
+
+.title button{
+    position: absolute;
+    cursor: pointer;
+    top:50vh;
+    left:1vh;
+    background-color:rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    border: solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-size: 2vh;
+    font-style: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title button:hover{
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 34, 3);
+}
+
+.intro{
+    overflow: hidden;
+    width:100%;
+    height: 60vh;
+    background-color:white;
+    padding-top:5vh;
+}
+.intro > div{
+    width:50vh;
+    margin:2vh;
+    display:inline-block;
+    vertical-align: top
+}
+.intro p{
+    font-size: 3vh;
+    margin:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+.quote{
+    padding:2vh;
+    height: 35vh;
+    background-color: rgba(70, 192, 96, 0.493);
+    border:white 10px;
+    border-style: double;
+    border-radius: 15px;
+}
+.quote p{
+    padding:1vh;
+    color:white;
+}
+
+.who{
+    height: 40vh;
+}
+#w-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 6vh;
+    margin-bottom:1vh;
+}
+
+#w-desc{
+    font-size: 2.5vh;
+}
+
+#w-sub{
+    margin-top:1vh;
+    font-size: 2vh;
+    color: rgb(68, 68, 68);
+}
+
+#q-desc{
+    font-size:3vh;
+    font-style: italic;
+}
+
+#q-from{
+    text-align: right;
+    font-size:2.5vh;
+}
+
+.services{
+    overflow: hidden;
+    width:100%;
+    height: 70vh;
+    margin-top: 0;
+    background-color:white;
+    padding-top:1vh;
+}
+.services p{
+    color:white;
+}
+
+.s-block{
+    background-color:rgb(69, 134, 219);
+    width:20%;
+    height:40vh;
+    margin: 0.5vh 2vh 2vh 2vh;
+    padding-top:2vh;
+    display:inline-block;
+    vertical-align: top;
+
+    border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+    color: rgb(255, 255, 255);
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+    z-index: 5;
+}
+
+.s-block:hover{
+    background-color:rgba(83, 73, 218, 0.863);
+    border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+.s-block > img{
+    border: transparent;
+}
+
+#s-title{
+    margin: 2vh 3vh 3vh 3vh;
+    color:black;
+    font-size: 7vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.e-title{
+    margin: 2vh 0 0 0;
+    font-size: 3vh;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.e-desc{
+    font-size: 2vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
