@@ -8,6 +8,7 @@
         <title>TJHSST LIFT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <script src="JS/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="CSS/index.css">
     </head>
     <body>
@@ -88,6 +89,12 @@
                     </div>
                 </div>
             </div>
+            <div class="projects" align = "center">
+                <div class="slides">
+                    <img id ="s-img" src="Pics/robot-person.jpg">
+                </div>
+                <div class="dot" id="dot0"></div>
+            </div>
         </div>
     </body>
 </html>
@@ -96,4 +103,73 @@
 //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
+
+$(window).scroll(function(){
+    var pos = $(document).scrollTop();
+    if(pos>=640){
+        $(".navigation").css("background-color", "white")
+        $(".navigation a").css("color", "black")
+    }
+    else{
+        $(".navigation").css("background-color", "transparent")
+        $(".navigation a").css("color", "white")
+    }
+});
+
+//slides show
+
+var iar=["robot-person.jpg","lift.jpg","arduino.jpg","testing.jpg"]
+var num =1;
+
+for(i=1;i<iar.length;i++) //making slideshow dots
+{
+    $(".projects").append(
+        '<div class="dot" id="dot'+ i +'"></div>'
+    );
+}
+
+$("#dot0").css("background-color", "rgb(107, 107, 107)");
+
+var num=0;
+
+//change slide by clicking dot - interferes w interval
+// $(".dot").click(function(){ 
+//     var d=$(this).attr('id')
+//     d=d.replace("dot","")
+
+//     var im = "Pics/"+iar[parseInt(d)]
+//     $("#s-img").fadeOut(500, function() {
+//         $("#s-img").attr("src",im);
+//     });
+//     $(".dot").css("background-color","rgb(182, 182, 182)")
+//     $("#dot"+parseInt(d)).css("background-color","rgb(107, 107, 107)")
+//     $("#s-img").fadeIn(500);
+//     num=parseInt(d)+1
+
+// });
+
+setInterval(function(){ //changing slides on slie show
+
+    if ($('#s-img:hover').length == 0) { //check  if mouse is over pic
+    
+        if(num>=iar.length){
+            num=0;
+        }
+
+        var im = "Pics/"+iar[num];
+        $("#s-img").fadeOut(500, function() {
+            $("#s-img").attr("src",im);
+        });
+
+        $(".dot").css("background-color","rgb(182, 182, 182)")
+        $("#dot"+num).css("background-color","rgb(107, 107, 107)")
+        $("#s-img").fadeIn(500);
+
+        num++;
+    }
+    
+}, 4000);
+
+
 </script>
