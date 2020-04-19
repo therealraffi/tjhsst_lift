@@ -103,7 +103,7 @@ body{
     font-size:12vh;
     margin-bottom: 0;
     padding:0;
-    font-family: 'sans-serif';
+    font-family: 'PT Sans', sans-serif;
 }
 
 #mission{
@@ -196,6 +196,7 @@ body{
     width:100%;
     height: 70vh;
     margin-top: 0;
+    margin-bottom:0;
     background-color:white;
     padding-top:1vh;
 }
@@ -223,10 +224,33 @@ body{
     background-color:rgba(83, 73, 218, 0.863);
     border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
     box-shadow: 10px 10px rgba(0,0,0,.25);
+    cursor: pointer;
 }
 
 .s-block > img{
     border: transparent;
+}
+
+.learn-more{
+    position: relative;
+    top:4vh;
+    color:rgb(0, 18, 43);
+    display: block;
+}
+.s-learn{
+    position:relative;
+    left:68vh;
+    padding: 1vh 1.5vh;
+    text-decoration: none;
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+    color:rgba(0, 0, 0, 0.637);
+    transition: ease 0.2s;
+}
+
+.s-learn:hover{
+    color:rgb(0, 0, 0);
+    font-size: 2.1vh;
 }
 
 #s-title{
@@ -265,12 +289,9 @@ body{
     vertical-align: center;
     margin:2.5vh;
     max-height: 90%;
-}
-
-.slides img:hover{
+    border-radius: 1vh;
     filter: brightness(90%);
-    max-height: 92%;
-    transition: all .2s ease;
+    
 }
 
 .dot {
@@ -280,5 +301,177 @@ body{
     background-color: rgb(182, 182, 182);
     border-radius: 50%;
     display: inline-block;
+    cursor: pointer;
+}
+
+.info{
+    width:100%;
+    height:wrap;
+    background-color: white;
+}
+
+.i-block{
+    width:100%;
+    height:44vh;
+    vertical-align: top;
+    transition: all .2s ease;
+}
+.display{
+    display:inline-block;
+    width:40%;
+    height: 35vh;
+    max-height: 45vh;
+    padding: 3vh 3vh;
+    vertical-align: top;
+}
+.exp{
+    display:inline-block;
+    width:40%;
+    height: 35vh;
+    padding:3vh 5vh;
+    vertical-align: center;
+}
+
+.i-title{
+    color:rgb(65, 65, 65);
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0.5vh 0vh;
+}
+.i-para{
+    color:rgb(80, 80, 80);
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.i-img{
+    position:relative;
+    max-height: 100%;
+
+    transition: all .2s ease;
+    border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+    box-shadow: 10px 10px rgba(78, 0, 0, 0.356);
+}
+
+.i-block:hover img{
+    max-height: 101%;
+    border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
+    box-shadow: 20px 20px rgba(0,0,0,.25);
+}
+
+.i-block:hover{
+    background-color: rgb(224, 255, 251);
+}
+
+.i-line {
+    position: relative;
+    height: 2px;
+    width: 90%;
+    border: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(182, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    z-index: 0;
+}
+.signup > img{
+    max-width: 100%;
+}
+.signup{
+    height: 62vh;
+    padding: 0;
+    background:rgba(37, 37, 37, 0.521);
+    padding:0.5vh;
+}
+.si-block{
+    display: inline-block;
+    vertical-align: top;
+    height: 60vh;
+    width:49.6%;
+    overflow: hidden;
+    margin:0;
+    padding-top: 1vh;
+}
+.si-block img{
+    height: 60vh;
+    margin: 0;
+    border:solid 2px;
+    border-radius: 0;
+    filter: brightness(65%) blur(3px);
+    z-index: -1;
+}
+
+.si-block2{
+    position: relative;
+    bottom:50vh;
+}
+
+.si-intro{
+    color:rgb(255, 255, 255);
+    font-size: 3vh;
+    font-family: 'Poppins', sans-serif;
+    width:40%;
+    z-index: 2;
+    margin: 0;
+}
+
+.si-signup{
+    display: inline-block;
+    padding: 1vh 2vh;
+    border-radius: 1vh;
+    background-color: rgba(5, 151, 0, 0.514);
+    color:rgb(255, 255, 255);
+    font-size: 1.8vh;
+    font-family: 'Poppins', sans-serif;
+    z-index: 2;
+    margin: 2vh;
+    transition: all .2s ease;
+}
+
+
+.si-signup:hover{
+    background-color: rgba(0, 245, 73, 0.514);
+    color:rgb(56, 56, 56);
+    cursor: pointer;
+}
+
+.about{
+    height: 54vh;
+    background-color: rgb(37, 37, 37);
+    transition:ease 0.2s;
+}
+
+.about p{
+    color:rgb(207, 207, 207);
+    font-family: 'Poppins', sans-serif;
+}
+
+.a-title{
+    margin:0;
+    padding:8vh 0 0 0;
+    width: 90%;
+    font-size: 5vh;
+}
+
+.a-para{
+    margin:1vh;
+    font-size: 2.5vh;
+    padding: 1vh 2vh;
+    width:90%;
+}
+
+.a-signup{
+    position: relative;
+    display:inline-block;
+    margin:0;
+    padding:1vh 2vh;
+    display: inline-block;
+    font-size: 2vh;
+    border:2px solid white;
+    left:40%;
+    transition: ease 0.2s;
+}
+
+.a-signup:hover{
+    font-size: 2.1vh;
+    color:black;
+    background-color: white;
     cursor: pointer;
 }
