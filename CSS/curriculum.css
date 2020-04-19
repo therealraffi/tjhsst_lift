@@ -1,0 +1,190 @@
+body{
+    background: white;
+    position:relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+.main{
+    position: relative;
+    background-color:white;
+    z-index: -2;
+}
+
+.navigation{
+    position:fixed;
+    top:0;
+    overflow: hidden;
+    width:100%;
+    height: 7vh;
+    padding-right: 8vh;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.nfade-in{
+    background-color: "white";
+}
+
+.navigation a {
+    float: right;
+    padding: 15px 30px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation:hover {
+    background-color:white !important;
+}
+
+.navigation:hover a{
+    color:black !important;
+}
+
+.navigation a:hover{
+    color: rgb(140, 180, 255) !important;
+}
+
+.logo{
+    cursor: pointer;
+    height: 3.8vh;
+    position: absolute;
+    left: 2vh;
+    vertical-align: center;
+}
+
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.295);
+}
+
+.banner img{
+    position: fixed;
+    filter: brightness(75%) blur(4px);
+    top:0;
+    right:0;
+    bottom: 0;
+    display:block;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: -3;
+}
+.title{
+    position: absolute;
+    top: 5vh;
+    left: 20vh;
+}
+
+.title p{
+    color: rgb(255, 255, 255);
+}
+
+#title-p{
+    font-size:12vh;
+    margin-bottom: 0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+.title{
+    position: absolute;
+    top: 5vh;
+    left: 20vh;
+}
+
+.title p{
+    color: rgb(255, 255, 255);
+}
+
+#title-p{
+    font-size:12vh;
+    margin-bottom: 0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+.summary{
+    overflow: hidden;
+    width:100%;
+    height: 40vh;
+    background-color:white;
+    padding-top:5vh;
+}
+.summary p{
+    color: rgb(53, 53, 53);
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+}
+
+.s-title{
+    font-size: 5vh;
+    margin-bottom: 0vh;
+}
+
+#s-desc{
+    font-size: 2.5vh;
+    text-align: left;
+}
+
+
+.mline{
+    margin: 7vh 0 0 0;
+    border: 0;
+    text-align: center;
+}
+
+.mline::before {
+    content: "\2022 \ \2022 \ \2022 \ \2022 \ \2022";
+    font-size: 50px;
+    color: rgb(202, 93, 79);
+}
+
+.math{
+    width: 100%;
+    height: 60vh;
+    background: white;
+    margin: 0;
+}
+
+.math p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.sub-title{
+    font-size: 8vh;
+    padding: 1vh 5%;
+    margin: 0;
+}
+
+.m-table {
+    background-color: rgb(255, 119, 119);
+    position: relative;
+    table-layout: fixed;
+    width: 50%;
+    left:5%;
+    border-radius: 2vh;
+}
+  
+.m-table td {
+    text-align: center;
+    font-size: 2vh;
+    width: 40vh;
+    padding:2vh 1vh;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    width: 40%;
+    border:1px  solid grey;
+    border-radius: 1vh;
+}

@@ -1,6 +1,8 @@
 body{
     background: white;
     position:relative;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin:0;
     padding:0;
     z-index: 0;
@@ -10,17 +12,6 @@ body{
     background-color:white;
     z-index: -2;
 }
-.mline{
-    margin: 7vh 0 0 0;
-    border: 0;
-    text-align: center;
-}
-
-.mline::before {
-    content: "\2022 \ \2022 \ \2022 \ \2022 \ \2022";
-    font-size: 50px;
-    color: rgb(202, 93, 79);
-  }
 
 .navigation{
     position:fixed;
@@ -57,6 +48,9 @@ body{
 .navigation a:hover{
     color: rgb(140, 180, 255) !important;
 }
+.active {
+   color:rgb(140, 180, 255) !important;
+}
 
 .logo{
     cursor: pointer;
@@ -66,9 +60,6 @@ body{
     vertical-align: center;
 }
 
-.active {
-   color:rgb(140, 180, 255);
-}
 
 .banner{
     position: relative;
@@ -120,10 +111,12 @@ body{
     background-color:rgba(255, 255, 255, 0);
     color: rgb(255, 255, 255);
     border: solid rgb(255, 255, 255);
+    border-radius: 1vh;
     padding: 10px 20px;
     font-size: 2vh;
     font-style: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all ease  0.25s;
 }
 .title button:hover{
     background-color:rgb(255, 255, 255);
@@ -133,39 +126,43 @@ body{
 .intro{
     overflow: hidden;
     width:100%;
-    height: 60vh;
+    height: 62vh;
     background-color:white;
     padding-top:5vh;
-}
-.intro > div{
-    width:50vh;
-    margin:2vh;
-    display:inline-block;
-    vertical-align: top
 }
 .intro p{
     font-size: 3vh;
     margin:0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: left;
 }
 .quote{
+    width:30%;
+    margin:2vh;
+    display:inline-block;
+    vertical-align: top;
     padding:2vh;
     height: 35vh;
-    background-color: rgba(70, 192, 96, 0.493);
+    background-color: rgba(17, 192, 55, 0.623);
     border:white 10px;
     border-style: double;
     border-radius: 15px;
+    transition: all ease 0.75s;
 }
+
 .quote p{
     padding:1vh;
     color:white;
 }
 
 .who{
+    width:30%;
+    margin:2vh;
+    display:inline-block;
+    vertical-align: top;
     height: 40vh;
 }
 #w-title{
+    text-align: left;
     font-family: 'Poppins', sans-serif;
     font-size: 6vh;
     margin-bottom:1vh;
@@ -173,6 +170,7 @@ body{
 
 #w-desc{
     font-size: 2.5vh;
+    text-align: left;
 }
 
 #w-sub{
@@ -181,33 +179,63 @@ body{
     color: rgb(68, 68, 68);
 }
 
-#q-desc{
-    font-size:3vh;
+.q-desc{
+    position: relative;
     font-style: italic;
+    text-align: left;
 }
 
-#q-from{
+.q-from{
+    position: absolute;
+    top:120vh;
+    left:35%;
     text-align: right;
-    font-size:2.5vh;
+}
+
+
+.in-exp{
+    margin:2vh;
+    width:75%;
+}
+
+.in-para{
+    font-size: 2.5vh !important;
+}
+
+.in-title{
+    color:rgba(17, 192, 55, 0.623);
+    font-size:5.5vh;
+}
+
+.mline{
+    margin: 7vh 0 0 0;
+    border: 0;
+    text-align: center;
+}
+
+.mline::before {
+    content: "\2022 \ \2022 \ \2022 \ \2022 \ \2022";
+    font-size: 50px;
+    color: rgb(202, 93, 79);
 }
 
 .services{
     overflow: hidden;
     width:100%;
-    height: 70vh;
-    margin-top: 0;
-    margin-bottom:0;
+    height: 80vh;
+    margin:0;
     background-color:white;
     padding-top:1vh;
 }
 .services p{
     color:white;
+    padding: 0 1vh;
 }
 
 .s-block{
     background-color:rgb(69, 134, 219);
     width:18%;
-    height:40vh;
+    height:50vh;
     margin: 0.5vh 2vh 2vh 2vh;
     padding-top:2vh;
     display:inline-block;
@@ -276,9 +304,11 @@ body{
     width:100%;
     height:65vh;
     margin-top: 0;
-    background-color:rgb(255, 255, 255);
-    padding-top:1vh;
+    background:rgba(27, 10, 10, 0.404);
+    padding-top:4vh;
+    transition: all ease 0.25s;
 }
+
 
 .slides{
     width: 80%;
@@ -288,7 +318,8 @@ body{
 .slides img{
     vertical-align: center;
     margin:2.5vh;
-    max-height: 90%;
+    max-width: 70%;
+    max-height: 100%;
     border-radius: 1vh;
     filter: brightness(90%);
     
@@ -297,8 +328,8 @@ body{
 .dot {
     height: 25px;
     width: 25px;
-    margin:1vh;
-    background-color: rgb(182, 182, 182);
+    margin:7vh 1vh;
+    background-color: rgb(202, 202, 202);
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
@@ -375,27 +406,32 @@ body{
     max-width: 100%;
 }
 .signup{
-    height: 62vh;
+    height: 62.5vh;
     padding: 0;
-    background:rgba(37, 37, 37, 0.521);
-    padding:0.5vh;
+    background:rgba(11, 9, 31, 0.856);
+    padding:3vh;
+    overflow: hidden;
 }
 .si-block{
     display: inline-block;
     vertical-align: top;
     height: 60vh;
-    width:49.6%;
+    width:45%;
     overflow: hidden;
     margin:0;
     padding-top: 1vh;
 }
 .si-block img{
     height: 60vh;
+    width: auto;
     margin: 0;
-    border:solid 2px;
-    border-radius: 0;
-    filter: brightness(65%) blur(3px);
+    filter: blur(3px) brightness(55%);
+    transition: all .1s ease;
     z-index: -1;
+}
+
+.si-block:hover img{
+    filter: blur(0) brightness(65%);
 }
 
 .si-block2{
@@ -421,7 +457,6 @@ body{
     font-size: 1.8vh;
     font-family: 'Poppins', sans-serif;
     z-index: 2;
-    margin: 2vh;
     transition: all .2s ease;
 }
 
@@ -434,12 +469,12 @@ body{
 
 .about{
     height: 54vh;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(255, 255, 255);
     transition:ease 0.2s;
 }
 
 .about p{
-    color:rgb(207, 207, 207);
+    color:rgb(46, 46, 46);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -474,4 +509,17 @@ body{
     color:black;
     background-color: white;
     cursor: pointer;
+}
+
+.bottom{
+    height:17vh;
+    background-color: rgb(0, 74, 185);
+    overflow: hidden;
+}
+
+.bottom p{
+    margin:2vh;
+    font-size:2vh;
+    color:rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
 }
