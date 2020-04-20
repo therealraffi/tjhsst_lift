@@ -8,7 +8,7 @@
         <title>TJHSST LIFT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|PT+Sans:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Nunito|PT+Sans:700" rel="stylesheet">
         <script src="JS/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="CSS/curriculum.css">
     </head>
@@ -21,13 +21,12 @@
             <a  href="index.html">Home</a>
             <a href="#" class="logo"><img src="Pics/marker-logo-grey-alert.png"></a>
         </div>
-        <div class="main">
-            <div class="banner">
-                <img src="Pics/whiteboard.jpg">
-                <div class="title">
-                    <p id="title-p">Curriculum</p>
-                </div>
+        <div class="banner">
+            <div class="title">
+                <p id="title-p">Curriculum</p>
             </div>
+        </div>
+        <div class="main">
             <div class="summary" align="center">
                 <p id="s-desc">
                     <span class="s-title">Aliuam conseuat</span> lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
@@ -39,16 +38,16 @@
                 <!-- <p id="w-sub">
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                 </p> -->
-                <table class="s-table">
+                <!-- <table class="s-table">
                     <tr>
-                        <td>STEM</td>
-                        <td>Math</td>
-                        <td>English</td>
+                        <td class="goto" id="gostem">STEM</td>
+                        <td class="goto" id="gomath">Math</td>
+                        <td class="goto" id="goenglish">English</td>
                     </tr>
-                </table>
+                </table> -->
                 <hr class="mline">
             </div>
-            <div class="stem">
+            <div class="stem" class="stem">
                 <p class="sub-title">STEM Projects</p>
                 <div class="select">
                         <table class="st-table" align="center">
@@ -75,6 +74,41 @@
                         </table>
                 </div>
             </div>
+            <div class="drop-info" id="drop-stem">
+                    <p class="close" align="left">x</p>
+                    <p class="d-title" align="center">Title</p>
+                    <div class="slides" align="center">
+                        <i class="left"></i>
+                        <img id ="s-img" src="Pics/robot-person.jpg">
+                        <i class="right"></i>
+                    </div>
+                    <table class="dates">
+                        <tr>
+                            <td>
+                                10/29/2019
+                            </td>
+                            <td>
+                                11/15/2019
+                            </td>
+                            <td>
+                                1/29/2019
+                            </td>
+                            <td>
+                                1/5/2019
+                            </td>
+                            <td>
+                                1/5/2019
+                            </td>
+                            <td>
+                                1/5/2019
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="d-desc">
+                        Purus viverra accumsan in nisl nisi scelerisque eu. Vitae et leo duis ut diam quam. Aliquam id diam maecenas ultricies mi eget mauris.
+                        Aliquam id diam maecenas ultricies mi eget mauris. I scelerisque eu. Vitae et leo duis ut diam quavrisque eu. Vitae et leo duis ut diam maecenas ul.
+                    </p>
+            </div>
             <div class="math">
                 <p class="sub-title">Math</p>
                 <div class="select">
@@ -82,13 +116,13 @@
                         <tr>
                             <td>
                                 <div class="t-block" align="center">
-                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/arduino.jpg');"></div>
+                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/testing.jpg');"></div>
                                     <p class="label">Testing</p>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-block" align="center">
-                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/arduino.jpg');"></div>
+                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/doingmath.jpg');"></div>
                                     <p class="label">Tutoring</p>
                                 </div>
                             </td>
@@ -96,6 +130,41 @@
                     </table>
                 </div>
                 <p class="see-more">See worksheets →</p>
+            </div>
+            <div class="drop-info" id="drop-math">
+                    <p class="close" align="left">x</p>
+                    <p class="d-title" align="center">Title</p>
+                    <div class="slides" align="center">
+                        <i class="left"></i>
+                        <img id ="s-img" src="Pics/robot-person.jpg">
+                        <i class="right"></i>
+                    </div>
+                    <table class="dates">
+                        <tr>
+                            <td>
+                                10/29/2019
+                            </td>
+                            <td>
+                                11/15/2019
+                            </td>
+                            <td>
+                                1/29/2019
+                            </td>
+                            <td>
+                                1/5/2019
+                            </td>
+                            <td>
+                                1/5/2019
+                            </td>
+                            <td>
+                                1/5/2019
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="d-desc">
+                        Purus viverra accumsan in nisl nisi scelerisque eu. Vitae et leo duis ut diam quam. Aliquam id diam maecenas ultricies mi eget mauris.
+                        Aliquam id diam maecenas ultricies mi eget mauris. I scelerisque eu. Vitae et leo duis ut diam quavrisque eu. Vitae et leo duis ut diam maecenas ul.
+                    </p>
             </div>
             <div class="english">
                 <p class="sub-title">English</p>
@@ -104,13 +173,13 @@
                         <tr>
                             <td>
                                 <div class="t-block" align="center">
-                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/arduino.jpg');"></div>
+                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/writing2.jpg');"></div>
                                     <p class="label">Testing</p>
                                 </div>
                             </td>
                             <td>
                                 <div class="t-block" align="center">
-                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/arduino.jpg');"></div>
+                                    <div class="thumbnail" align="center" style="background-image: url('../Pics/openbook.jpeg');"></div>
                                     <p class="label">Tutoring</p>
                                 </div>
                             </td>
@@ -119,7 +188,8 @@
                 </div>
                 <p class="see-more">See worksheets →</p>
             </div>
-            <div class="drop-info">
+            <div class="drop-info" id="drop-english">
+                <p class="close" align="left">x</p>
                 <p class="d-title" align="center">Title</p>
                 <div class="slides" align="center">
                     <i class="left"></i>
@@ -147,7 +217,7 @@
                             1/5/2019
                         </td>
                     </tr>
-                </table>>
+                </table>
                 <p class="d-desc">
                     Purus viverra accumsan in nisl nisi scelerisque eu. Vitae et leo duis ut diam quam. Aliquam id diam maecenas ultricies mi eget mauris.
                     Aliquam id diam maecenas ultricies mi eget mauris. I scelerisque eu. Vitae et leo duis ut diam quavrisque eu. Vitae et leo duis ut diam maecenas ul.
@@ -166,6 +236,8 @@
 
 $(window).on("load", function() {
     $(".active").css("color","rgb(140, 180, 255)")
+    $(".drop-info").hide()
+
     $(window).scroll(function(){
     var pos = $(document).scrollTop();
     if(pos>=300){
@@ -177,5 +249,34 @@ $(window).on("load", function() {
         $(".navigation a").css("color", "white")
     }
     });
+
+    $(".t-block").click(function(){
+        $(".t-block").css("filter", "brightness(100%)")
+        $(this).css("filter", "brightness(40%)").fadeIn()
+        var image = $(this).children(".thumbnail").css("background-image").replace("(", "").replace(")", "")
+        image = image.substring(image.lastIndexOf("/Pics"), image.length-1)
+        console.log(image)
+        var title = $(this).text()
+        var sub  = $(this).parent().parent().parent().parent().parent().parent().attr("class")
+        var drop = "#drop-" + sub
+        $(drop+" .d-title").text(title)
+        $(drop).children(".slides").children("#s-img").attr("src", image)
+        $(drop).slideDown()
+    })
+
+    $(".close").click(function(){
+        $(this).parent().slideUp()
+    })
+
+    $(".goto").click(function() {
+        var sub = $(this).attr("id").replace("go", "")
+        console.log(sub)
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("."+sub).offset().top
+        }, 200);
+    });
+
+
 })
+
 </script>
