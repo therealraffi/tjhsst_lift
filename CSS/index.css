@@ -48,9 +48,6 @@ body{
 .navigation a:hover{
     color: rgb(140, 180, 255) !important;
 }
-.active {
-   color:rgb(140, 180, 255) !important;
-}
 
 .logo{
     cursor: pointer;
