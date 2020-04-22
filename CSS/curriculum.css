@@ -8,11 +8,11 @@ body{
     z-index: 0;
 }
 .main{
-    top:40vh;
+    top:35vh;
     position: relative;
     background-color:white;
     padding-bottom: 6vh;
-    z-index: -2;
+    z-index: 0;
 }
 
 .navigation{
@@ -134,12 +134,13 @@ body{
     table-layout: fixed;
     width: 80%;
     border-radius: 2vh;
-    border-spacing: 3vh 2vh;
+    border-spacing: 3vh;
 }
   
 .s-table td {
     text-align: center;
     font-size: 3vh;
+    padding:3vh;
     overflow: hidden;
     color: grey;
     font-family: 'Poppins', sans-serif;

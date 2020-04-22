@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>TJHSST LIFT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|PT+Sans:700&display=swap" rel="stylesheet">
+        <script src="JS/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="CSS/resource.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <a href="about.html">About</a>
+            <a href="signup.html">Sign Up</a>
+            <a class="active" href="resource.html">Resources</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a href="index.html">Home</a>
+            <a href="#" class="logo"><img src="Pics/marker-logo-grey-alert.png"></a>
+        </div>
+       <div class="banner">
+            <div class="title">
+                <p id="title-p">Resources</p>
+            </div>
+        </div>
+        <div class="main">
+        </div>
+    </body>
+</html>
+
+<script>
+
+$(window).on("load", function() {
+    $(".active").css("color","rgb(140, 180, 255)")
+    $(".drop-info").hide()
+
+    $(window).scroll(function(){
+        var pos = $(document).scrollTop();
+        if(pos>=300){
+            $(".navigation").css("background-color", "white")
+            $(".navigation a").css("color", "black")
+        }
+        else{
+            $(".navigation").css("background-color", "transparent")
+            $(".navigation a").css("color", "white")
+        }
+    });
+
+    var docs=[
+        ["Current Schedule","Pics/tjpdf.pdf"],["Math Worksheet #1","Pics/tjpdf.pdf"],["Math Worksheet #2","Pics/tjpdf.pdf"],["English Worksheet #1","Pics/tjpdf.pdf"],["Math Practice Test","Pics/tjpdf.pdf"],["English Practice Test","Pics/tjpdf.pdf"]
+    ]
+    for(i=0; i<docs.length; i++)
+    {
+        var link=docs[i][1]
+        var name=docs[i][0]
+        var lname= link.replace("Pics/","").replace(".pdf","")
+
+        $(".main").append(
+            '<div class="sheet" align="left"><p class="s-title">' + name + '</p><div class="s-container" align="center" style="background-color: rgb(57, 146, 230);"><a class="s-click" href="'+link+'" target="_blank">Preview</a><a class="s-click" href="Pics/tjpdf.pdf" download="'+ lname +'">Download</a></div></div>'
+        )
+    }
+})
+
+</script>

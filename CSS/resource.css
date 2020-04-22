@@ -1,0 +1,140 @@
+body{
+    position:relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin:0;
+    padding:0;
+    z-index: 0;
+}
+
+.main{
+    width:100%;
+    top:35vh;
+    position: relative;
+    background-color:white;
+    padding: 5vh 0;
+}
+
+.navigation{
+    position:fixed;
+    top:0;
+    overflow: hidden;
+    width:100%;
+    height: 7vh;
+    padding-right: 8vh;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.nfade-in{
+    background-color: "white";
+}
+
+.navigation a {
+    float: right;
+    padding: 15px 30px;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation:hover {
+    background-color:white !important;
+}
+
+.navigation:hover a{
+    color:black !important;
+}
+
+.navigation a:hover{
+    color: rgb(140, 180, 255) !important;
+}
+
+.logo{
+    cursor: pointer;
+    height: 3.8vh;
+    position: absolute;
+    left: 2vh;
+    vertical-align: center;
+}
+
+
+.banner{
+    top:0;
+    position: fixed;
+    background-color: rgb(57, 181, 230);
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.title{
+    position: absolute;
+    top: 5vh;
+    left: 20vh;
+}
+
+.title p{
+    color: rgb(255, 255, 255);
+}
+
+#title-p{
+    font-size:12vh;
+    margin-bottom: 0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.sheet{
+    height: 12vh;
+    width: 95%;
+    margin:4vh;
+    border-radius: 6vh;
+    transition: all ease 0.2s;
+}
+
+.sheet:hover{
+    -webkit-box-shadow: 0 3px 2px #777;
+	-moz-box-shadow: 0 3px 2px #777;
+    box-shadow: 1px 0 6px 3px #777;}
+
+.s-container{
+    float:right;
+    height: 100%;
+    width:60%;
+    border-top-right-radius: 6vh;
+    border-bottom-right-radius:6vh;
+}
+
+.sheet p,a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.s-title{
+    display: inline-block;
+    color: rgb(78, 49, 49);
+    font-size: 5vh;
+    margin:2vh 0 0 3%;
+}
+
+.s-click{
+    color: rgb(240, 240, 240);
+    font-size: 2.5vh;
+    display: inline-block;
+    width:25%;
+    margin: 2vh 6%;
+    padding:1.8vh 2vh;
+    border:solid white 1px;
+    border-radius: 3vh;
+    transition:all ease 0.2s;
+}
+
+.s-click:hover{
+    color: rgb(80, 80, 80);
+    background-color: white;
+    border:solid white 1px;
+    border-radius: 3vh;
+    cursor: pointer;
+}

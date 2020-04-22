@@ -14,11 +14,11 @@
     </head>
     <body>
         <div class="navigation">
-            <a href="#">Contact</a>
-            <a href="#">Forms</a>
-            <a href="#">Schedule</a>
+            <a href="about.html">About</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="resource.html">Resources</a>
             <a href="curriculum.html">Curriculum</a>
-            <a class="active" href="#">Home</a>
+            <a class="active" href="index.html">Home</a>
             <a href="#" class="logo"><img src="Pics/marker-logo-grey-alert.png"></a>
         </div>
         <div class="main">
@@ -50,16 +50,19 @@
             </div>
             <div class="services" align="center">
                 <p id="s-title">We Teach...</p>
-                <div class="s-block" align="center">
-                    <img src="Pics/reading.png">
-                    <div class="explain">
-                        <p class="e-title">Reading</p>
-                        <p class="e-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
+                <a href="curriculum.html">
+                    <div class="s-block" align="center">
+                        <img src="Pics/reading.png">
+                        <div class="explain">
+                            <p class="e-title">Reading</p>
+                            <p class="e-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
+                <a href="curriculum.html">
                 <div class="s-block" align="center">
                     <img src="Pics/calculation.png">
                     <div class="explain">
@@ -70,28 +73,33 @@
                         </p>
                     </div>
                 </div>
-                <div class="s-block" align="center">
-                    <img src="Pics/robot.png">
-                    <div class="explain">
-                        <p class="e-title">STEM</p>
-                        <p class="e-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
+                </a>
+                <a href="curriculum.html">
+                    <div class="s-block" align="center">
+                        <img src="Pics/robot.png">
+                        <div class="explain">
+                            <p class="e-title">STEM</p>
+                            <p class="e-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="s-block" align="center">
-                    <img src="Pics/deal.png">
-                    <div class="explain">
-                        <p class="e-title">Leadership</p>
-                        <p class="e-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
+                </a>
+                <a href="curriculum.html">
+                    <div class="s-block" align="center">
+                        <img src="Pics/deal.png">
+                        <div class="explain">
+                            <p class="e-title">Leadership</p>
+                            <p class="e-desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div class="learn-more">
-                    <a href="#" class = "s-learn">Learn more →</a>
+                    <a href="curriculum.html" class = "s-learn">Learn more →</a>
                 </div>
             </div>
             <div class="projects" align = "center">
@@ -196,16 +204,18 @@
 
 $(window).on("load", function() {
     $(".active").css("color","rgb(140, 180, 255)")
+
     $(window).scroll(function(){
     var pos = $(document).scrollTop();
-    if(pos>=640){
-        console.log($(".navigation:hover").length)
+    if(pos>=710){
         $(".navigation").css("background-color", "white")
         $(".navigation a").css("color", "black")
+        $(".active").css("color","rgb(140, 180, 255)")
     }
     else{
         $(".navigation").css("background-color", "transparent")
         $(".navigation a").css("color", "white")
+        $(".active").css("color","rgb(140, 180, 255)")
     }
     });
 
@@ -300,5 +310,4 @@ $(window).on("load", function() {
         
     }, 4000);
 })
-
 </script>
