@@ -1,5 +1,4 @@
 body{
-    background: white;
     position:relative;
     overflow-x: hidden;
     overflow-y: auto;
@@ -7,10 +6,13 @@ body{
     padding:0;
     z-index: 0;
 }
+
 .main{
+    width:100%;
+    top:80vh;
     position: relative;
     background-color:white;
-    z-index: -2;
+    padding: 5vh 0 0 0;
 }
 
 .navigation{
@@ -20,7 +22,7 @@ body{
     width:100%;
     height: 7vh;
     padding-right: 8vh;
-    z-index: 1;
+    z-index: 3;
     transition: 0.3s;
 }
 
@@ -59,24 +61,24 @@ body{
 
 
 .banner{
-    position: relative;
+    top:0;
+    position: fixed;
     width: 100%;
     height: 80vh;
     overflow: hidden;
 }
 
-.banner img{
-    position: fixed;
-    filter: brightness(75%);
-    top:0;
-    right:0;
-    bottom: 0;
-    display:block;
-    width: 100%;
-    height: auto;
-    display: block;
-    z-index: -3;
+.ba{
+    background-image:url("../Pics/teaching1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 100%;
+    filter:brightness(80%);
+    z-index: -6;
+    position: absolute;
 }
+
 .title{
     position: absolute;
     top: 5vh;
@@ -123,7 +125,6 @@ body{
 .intro{
     overflow: hidden;
     width:100%;
-    height: 62vh;
     background-color:white;
     padding-top:5vh;
 }
@@ -133,6 +134,7 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .quote{
+    position: relative;
     width:30%;
     margin:2vh;
     display:inline-block;
@@ -149,6 +151,19 @@ body{
 .quote p{
     padding:1vh;
     color:white;
+}
+
+.q-desc{
+    position: absolute;
+    font-style: italic;
+    text-align: left;
+}
+
+.q-from{
+    bottom:10%;
+    position: absolute;
+    right:10%;
+    text-align: right;
 }
 
 .who{
@@ -176,19 +191,6 @@ body{
     color: rgb(68, 68, 68);
 }
 
-.q-desc{
-    position: relative;
-    font-style: italic;
-    text-align: left;
-}
-
-.q-from{
-    position: absolute;
-    top:120vh;
-    left:35%;
-    text-align: right;
-}
-
 
 .in-exp{
     margin:2vh;
@@ -205,7 +207,7 @@ body{
 }
 
 .mline{
-    margin: 7vh 0 0 0;
+    margin: 4vh 0 0 0;
     border: 0;
     text-align: center;
 }
@@ -301,25 +303,19 @@ body{
     width:100%;
     height:65vh;
     margin-top: 0;
-    background:rgba(27, 10, 10, 0.404);
+    background:rgb(87, 87, 87);
     padding-top:4vh;
     transition: all ease 0.25s;
 }
 
 
 .slides{
-    width: 80%;
+    width: 60%;
+    height:70%;
+    background-size: cover;
+    background-position: center;
     height:50vh;
-}
-
-.slides img{
-    vertical-align: center;
-    margin:2.5vh;
-    max-width: 70%;
-    max-height: 100%;
     border-radius: 1vh;
-    filter: brightness(90%);
-    
 }
 
 .dot {
@@ -381,7 +377,7 @@ body{
     box-shadow: 10px 10px rgba(78, 0, 0, 0.356);
 }
 
-.i-block:hover img{
+.i-block:hover .i-img{
     max-height: 101%;
     border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
     box-shadow: 20px 20px rgba(0,0,0,.25);
@@ -397,71 +393,77 @@ body{
     width: 90%;
     border: 0;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(182, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    z-index: 0;
 }
-.signup > img{
-    max-width: 100%;
-}
+
 .signup{
-    height: 62.5vh;
-    padding: 0;
-    background:rgba(11, 9, 31, 0.856);
-    padding:3vh;
-    overflow: hidden;
+    height: 105vh;
+    background-color: black;
 }
+
 .si-block{
-    display: inline-block;
-    vertical-align: top;
-    height: 60vh;
-    width:45%;
-    overflow: hidden;
-    margin:0;
-    padding-top: 1vh;
-}
-.si-block img{
-    height: 60vh;
-    width: auto;
-    margin: 0;
-    filter: blur(3px) brightness(55%);
-    transition: all .1s ease;
-    z-index: -1;
-}
-
-.si-block:hover img{
-    filter: blur(0) brightness(65%);
-}
-
-.si-block2{
     position: relative;
-    bottom:50vh;
+    vertical-align: top;
+    display: inline-block;
+    width: 49.8%;
+    height: 50%;
+
+}
+
+.s-img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:brightness(60%);
+    transition: ease all 0.2s;
+
+}
+
+.si-block:hover .s-img{
+    filter:brightness(60%) blur(5px);
 }
 
 .si-intro{
+    position: absolute;
     color:rgb(255, 255, 255);
-    font-size: 3vh;
+    font-size: 4vh;
     font-family: 'Poppins', sans-serif;
-    width:40%;
-    z-index: 2;
-    margin: 0;
+    z-index: 1;
+
+    margin-top: 3vh;
+    width:70%;
+    left:15%;
+
 }
 
 .si-signup{
-    display: inline-block;
-    padding: 1vh 2vh;
-    border-radius: 1vh;
-    background-color: rgba(5, 151, 0, 0.514);
+    position: absolute;
     color:rgb(255, 255, 255);
-    font-size: 1.8vh;
+    font-size: 4vh;
     font-family: 'Poppins', sans-serif;
-    z-index: 2;
-    transition: all .2s ease;
+    z-index: 1;
+
+    display: inline-block;
+    padding:2vh;
+    margin-top: 17vh;
+    left:45%;
+    font-size: 2.5vh !important;
+    background-color: rgba(0, 117, 10, 0.479);
+    border: 2px white solid;
+    border-radius: 8vh;
+    transition: all ease 0.2s;
+    cursor: pointer;
 }
 
-
 .si-signup:hover{
-    background-color: rgba(0, 245, 73, 0.514);
-    color:rgb(56, 56, 56);
-    cursor: pointer;
+    background-color: white;
+    color: rgba(0, 117, 10, 0.479);
+
+}
+
+#big{
+    font-size: 4.8vh;
+    color:rgb(195, 255, 195);
 }
 
 .about{
@@ -470,12 +472,9 @@ body{
     transition:ease 0.2s;
 }
 
-.about p{
+.a-title{
     color:rgb(46, 46, 46);
     font-family: 'Poppins', sans-serif;
-}
-
-.a-title{
     margin:0;
     padding:8vh 0 0 0;
     width: 90%;
@@ -483,6 +482,8 @@ body{
 }
 
 .a-para{
+    color:rgb(46, 46, 46);
+    font-family: 'Poppins', sans-serif;
     margin:1vh;
     font-size: 2.5vh;
     padding: 1vh 2vh;
@@ -498,7 +499,9 @@ body{
     font-size: 2vh;
     border:2px solid white;
     left:40%;
+    text-decoration: none;
     transition: ease 0.2s;
+    font-family: 'Poppins', sans-serif;
 }
 
 .a-signup:hover{
@@ -509,12 +512,15 @@ body{
 }
 
 .bottom{
-    height:17vh;
+    margin:0;
+    height:15vh;
     background-color: rgb(0, 74, 185);
     overflow: hidden;
+    bottom:0;
+    padding:3vh;
 }
 
-.bottom p{
+.bp{
     margin:2vh;
     font-size:2vh;
     color:rgb(255, 255, 255);

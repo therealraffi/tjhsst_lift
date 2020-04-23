@@ -10,6 +10,9 @@ body{
     top:35vh;
     position: relative;
     background-color:white;
+    background-image: linear-gradient(to right, rgba(0, 195, 255, 0.192), rgb(255, 255, 255)), url('../Pics/hills.jpeg');
+    background-size: 79.3%;
+    background-repeat: repeat-y;
     padding: 5vh 0;
 }
 
@@ -166,7 +169,7 @@ body{
     padding-top: 1vh;
     height: 140vh;
     width:100%;
-    background-color: rgb(59, 59, 59);
+    background-color: rgba(0, 0, 0, 0.349);
 }
 
 .member{

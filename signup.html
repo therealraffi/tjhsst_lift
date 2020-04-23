@@ -15,9 +15,9 @@
     <body>
         <div class="navigation">
             <a href="about.html">About</a>
-            <a href="signup.html">Sign Up</a>
+            <a class="active" href="signup.html">Sign Up</a>
             <a href="resource.html">Resources</a>
-            <a class="active" href="curriculum.html">Curriculum</a>
+            <a href="curriculum.html">Curriculum</a>
             <a  href="index.html">Home</a>
             <a href="#" class="logo"><img src="Pics/marker-logo-grey-alert.png"></a>
         </div>
@@ -37,9 +37,144 @@
                 <div class="pic left" style="background-image: url('Pics/gotoschool.webp')"></div>
                 <div class="pic right" style="background-image: url('Pics/rapmon.webp')"></div>
                 <div class="pic left" style="background-image: url('Pics/tjfront.jpg')"></div>
-                <div class="pic right" style="background-image: url('Pics/teaching1.jpeg')"></div>
             </div>
-            <iframe class="sheet" id="sform" src="https://docs.google.com/forms/d/e/1FAIpQLSd98bTmhI4JZZS1qpZDhE5-iHt6RsZex9J25G3sk7Hx1_jLhA/viewform?embedded=true" width="1000" height="407" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+            <div class="sheet" id="mentor-sheet">
+                    <p id="mentor-p" style="background-color:white"><strong>TJHSST Lift Mentorship Mentor Appication</strong></p>
+                    <form class="form" action="https://docs.google.com/forms/d/1IWqcFJazN9-Yvzk7dYAuwb1oYZ_-1DhTdUHNl9oCWf8/formResponse" target="curriculum.html" align="left">
+
+                        <div class="box">
+                            <input name="entry.1429521514" type="text" placeholder="Full Name" required/>
+                        </div>
+                        <div class="box">
+                            <input name="entry.1905607234" placeholder="Email Address" type="email" required />
+                        </div>
+                        <div class="box">
+                            <label>Do You currently Attend TJHSST?</label>
+                            <select name="entry.347540766" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="box">
+                            <label>What grade are you in?</label>
+                            <select  name="entry.2077623410" required>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="box">
+                            <label>Have you been in TJHSST Lift before?</label>
+                            <select name="entry.991458396" required>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+
+                        <div class="box">
+                            <textarea class="apply" name="entry.1721790255" placeholder="Why do you want to apply to this program?" required></textarea>
+                        </div>
+                        <div class="box">
+                            <textarea class="extra" name="entry.1560677005" placeholder="Anything else we should know?"></textarea>
+                        </div>
+                        <input type="submit" value="Send" />
+                  </form>
+            </div>
+            <div class="sheet" id="mentee-sheet">
+                <p><strong id="mentee-p">TJHSST Lift Mentorship Mentee Appication</strong></p>
+                <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSd98bTmhI4JZZS1qpZDhE5-iHt6RsZex9J25G3sk7Hx1_jLhA/formResponse" target="curriculum.html" align="left">
+                    <div class="box">
+                        <input name="entry.848780781" type="text" placeholder="Full Name" required/>
+                    </div>
+                    <div class="box">
+                        <input name="entry.556909304" placeholder="Email Address" type="email" required />
+                    </div>
+                    <div class="box">
+                        <input name="entry.1421346081" placeholder="Parent/Guardian Email" type="email" required />
+                    </div>
+                    <div class="box">
+                        <input name="entry.2120085156" placeholder="State" type="text" required />
+                    </div>
+                    <div class="box">
+                        <label>What grade are you in?</label>
+                        <select  name="entry.361182308" required>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <input name="entry.1413452312" placeholder="School" type="text" required />
+                    </div>
+                    <div class="box">
+                        <textarea class="apply" name="entry.645873033" placeholder="Why do you want to apply to this program?" required></textarea>
+                    </div>
+                    <div class="box">
+                        <textarea class="extra" name="entry.1903951177" placeholder="Anything else we should know?"></textarea>
+                    </div>
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+            <!-- <iframe class="sheet" id="mentee-sheet" src="https://docs.google.com/forms/d/e/1FAIpQLSd98bTmhI4JZZS1qpZDhE5-iHt6RsZex9J25G3sk7Hx1_jLhA/viewform?embedded=true" width="1000" height="407" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe class="sheet" id="mentor-sheet" src="https://docs.google.com/forms/d/e/1FAIpQLSfUwp0AKqZs_xbbHULcoPHBBougffgaaOC3jK4xA-qEDiUdCA/viewform?embedded=true" width="640" height="1625" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
         </div>
     </body>
 </html>
+
+<script>
+$(window).on("load", function() {
+    $(".active").css("color","rgb(140, 180, 255)")
+    $("#mentor-sheet").hide()
+    $("#mentee-sheet").css("background-color","rgb(115, 136, 230)")
+    $("#mentee-sheet").css("border","1px solid white")
+    $("#mentee-sheet").css("color","white")
+
+    $(window).scroll(function(){
+        var pos = $(document).scrollTop();
+        if(pos>=240){
+            $(".active").css("color","rgb(140, 180, 255)")
+            $(".navigation").css("background-color", "white")
+            $(".navigation a").css("color", "black")
+        }
+        else{
+            $(".active").css("color","rgb(140, 180, 255)")
+            $(".navigation").css("background-color", "transparent")
+            $(".navigation a").css("color", "white")
+        }
+    });
+
+    $(".user").click(function(){
+        var i = $(this).attr("id")
+        console.log(i)
+        if(i=="mentor")
+        {
+            $("#mentee-sheet").hide()
+            $("#mentor-sheet").show()
+
+            $("#mentor").css("background-color","rgb(83, 206, 228)")
+            $("#mentor").css("border","1px solid white")
+            $("#mentor").css("color","white")
+
+            $("#mentee").css("background-color","white")
+            $("#mentee").css("border","2px solid grey")
+            $("#mentee").css("color","rgb(61, 61, 61)")
+        }
+        if(i=="mentee")
+        {
+            $("#mentee-sheet").show()
+            $("#mentor-sheet").hide()
+
+            $("#mentee").css("background-color","rgb(115, 136, 230)")
+            $("#mentee").css("border","2px solid white")
+            $("#mentee").css("color","white")
+
+            $("#mentor").css("background-color","white")
+            $("#mentor").css("border","2px solid grey")
+            $("#mentor").css("color","rgb(61, 61, 61)")
+        }
+    })
+})
+</script>
