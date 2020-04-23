@@ -263,9 +263,8 @@ $(window).on("load", function() {
             $(".slides").css("background-image","url('"+im + "')")
             $(".slides").fadeIn();
             num=nid+1;
-
         },400)
-        $("#s-img").fadeOut();
+        $(".slides").fadeOut();
     });
 
     $(".title button").click(function() {
