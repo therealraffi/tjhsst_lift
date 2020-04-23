@@ -254,7 +254,7 @@ $(window).on("load", function() {
         $(".t-block").css("filter", "brightness(100%)")
         $(this).css("filter", "brightness(40%)").fadeIn()
         var image = $(this).children(".thumbnail").css("background-image").replace("(", "").replace(")", "")
-        image = image.substring(image.lastIndexOf("/Pics"), image.length-1)
+        image = image.substring(image.lastIndexOf("Pics"), image.length-1)
         console.log(image)
         var title = $(this).text()
         var sub  = $(this).parent().parent().parent().parent().parent().parent().attr("class")
