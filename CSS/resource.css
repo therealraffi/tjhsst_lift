@@ -57,12 +57,25 @@ body{
     color: rgb(140, 180, 255) !important;
 }
 
+.navigation:hover .logo{
+    background-image: url("../Pics/tjlogo2.png");
+}
+
+.logo:hover{
+    background-color: rgb(212, 226, 255);
+}
+
 .logo{
+    background-image: url("../Pics/tjlogo2-light.png");
+    background-size: cover;
+    background-position: center;
+    width: 10%;
+    height: 100%;
+    padding:0 !important;
     cursor: pointer;
-    height: 3.8vh;
     position: absolute;
-    left: 2vh;
-    vertical-align: center;
+    left: 4vh;
+    transition: all ease 0.1s;
 }
 
 
@@ -98,12 +111,13 @@ body{
     margin:4vh;
     border-radius: 6vh;
     transition: all ease 0.2s;
+    background-color: rgba(140, 228, 255, 0.603);
 }
 
 .sheet:hover{
     -webkit-box-shadow: 0 3px 2px #777;
 	-moz-box-shadow: 0 3px 2px #777;
-    box-shadow: 1px 0 6px 3px #777;}
+    box-shadow: 1px 9px 6px #777;}
 
 .s-container{
     float:right;
@@ -120,7 +134,7 @@ body{
 
 .s-title{
     display: inline-block;
-    color: rgb(78, 49, 49);
+    color: rgb(37, 37, 37);
     font-size: 5vh;
     margin:2vh 0 0 3%;
 }

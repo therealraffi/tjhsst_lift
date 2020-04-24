@@ -19,7 +19,7 @@
             <a href="resource.html">Resources</a>
             <a class="active" href="curriculum.html">Curriculum</a>
             <a  href="index.html">Home</a>
-            <a href="#" class="logo"><img src="Pics/marker-logo-grey-alert.png"></a>
+            <a href="index.html" class="logo"></a>
         </div>
         <div class="banner">
             <div class="title">
@@ -240,14 +240,16 @@ $(window).on("load", function() {
 
     $(window).scroll(function(){
     var pos = $(document).scrollTop();
-    if(pos>=300){
-        $(".navigation").css("background-color", "white")
-        $(".navigation a").css("color", "black")
-    }
-    else{
-        $(".navigation").css("background-color", "transparent")
-        $(".navigation a").css("color", "white")
-    }
+        if(pos>=240){
+            $(".navigation").css("background-color", "white")
+            $(".navigation a").css("color", "black")
+            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+        }
+        else{
+            $(".navigation").css("background-color", "transparent")
+            $(".navigation a").css("color", "white")
+            $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
+        }
     });
 
     $(".t-block").click(function(){
