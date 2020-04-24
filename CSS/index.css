@@ -527,7 +527,7 @@ body{
 }
 
 .a-signup{
-    position: relative;
+    position: absolute;
     display:inline-block;
     margin:0;
     display: inline-block;

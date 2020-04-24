@@ -174,9 +174,9 @@
                     <p class="a-signup">Learn more →</p>
                 </a>
                 <p class="a-quote">
-                    <i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    "<i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et. Adipiscing elit, sed do eiusmod tempor.
-                    </i>
+                    </i>"
                 </p>
             </div>
             <div class="bottom" align="center">
@@ -195,6 +195,22 @@
 
 $(window).on("load", function() {
     $(".active").css("color","rgb(140, 180, 255)")
+    $(".a-quote").fadeIn()
+    var pos = $(document).scrollTop();
+    if(pos>=560){
+        $(".navigation").css("background-color", "white")
+        $(".navigation a").css("color", "black")
+        $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+
+    }
+    else{
+        $(".navigation").css("background-color", "transparent")
+        $(".navigation a").css("color", "white")
+        $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
+        if($(".navigation:hover").length==1)
+            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+    }
+
 
     $(window).scroll(function(){
     var pos = $(document).scrollTop();
@@ -202,12 +218,15 @@ $(window).on("load", function() {
         $(".navigation").css("background-color", "white")
         $(".navigation a").css("color", "black")
         $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+
     }
     else{
         $(".navigation").css("background-color", "transparent")
         $(".navigation a").css("color", "white")
         $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
-    }
+        if($(".navigation:hover").length==1)
+            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+        }
     });
 
     //alternating quotes
