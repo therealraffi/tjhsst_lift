@@ -8,7 +8,7 @@
         <title>TJHSST LIFT</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|PT+Sans:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Nunito|PT+Sans:700" rel="stylesheet">
         <script src="JS/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="CSS/resource.css">
     </head>
@@ -27,10 +27,20 @@
             </div>
         </div>
         <div class="main">
+            <div class="current" align="left">
+                <p class="c-title">Forms</p>
+            </div>
+            <div class="old">
+            </div>
+            <div class="drop-info">
+                <p class="close" align="left">x</p>
+                <p class="d-title" align="center">Title</p>
+            </div>
         </div>
     </body>
 </html>
 
+<script type="text/javascript" src="JSON/forms.json"></script>
 <script>
 
 $(window).on("load", function() {
@@ -51,19 +61,121 @@ $(window).on("load", function() {
         }
     });
 
-    var docs=[
-        ["Current Schedule","Pics/tjpdf.pdf"],["Math Worksheet #1","Pics/tjpdf.pdf"],["Math Worksheet #2","Pics/tjpdf.pdf"],["English Worksheet #1","Pics/tjpdf.pdf"],["Math Practice Test","Pics/tjpdf.pdf"],["English Practice Test","Pics/tjpdf.pdf"]
-    ]
-    for(i=0; i<docs.length; i++)
-    {
-        var link=docs[i][1]
-        var name=docs[i][0]
-        var lname= link.replace("Pics/","").replace(".pdf","")
+    $(".t-block").click(function(){
+        $(".t-block").css("filter", "brightness(100%)")
+        $(this).css("filter", "brightness(40%)").fadeIn()
+        var image = $(this).children(".thumbnail").css("background-image").replace("(", "").replace(")", "")
+        image = image.substring(image.lastIndexOf("Pics"), image.length-1)
+        console.log(image)
+        var title = $(this).text()
+        var sub  = $(this).parent().parent().parent().parent().parent().parent().attr("class")
+        var drop = "#drop-" + sub
+        $(drop+" .d-title").text(title)
+        $(drop).children(".slides").children("#s-img").attr("src", image)
+        $(drop).slideDown()
+    })
 
-        $(".main").append(
-            '<div class="sheet" align="left"><p class="s-title">' + name + '</p><div class="s-container" align="center" style="background-color: rgb(57, 146, 230);"><a class="s-click" href="'+link+'" target="_blank">Preview</a><a class="s-click" href="Pics/tjpdf.pdf" download="'+ lname +'">Download</a></div></div>'
-        )
-    }
+    $(".close").click(function(){
+        $(this).parent().slideUp()
+        $(".t-block").css("filter", "brightness(100%)")
+    })
+
+    var d = JSON.parse(forms)
+    console.log(d[0])
+
+    $.getJSON("JSON/forms.json", function(data){ //load current forms
+        var years = []
+        for(i=0;i<data.length;i++)
+        {
+            var name= data[i]["name"]
+            var date= data[i]["date"]
+            var path= data[i]["file"]
+            var year= data[i]["year"]
+            var fname = name + path.split(".")[1]
+            var current= parseInt(data[i]["current"])
+
+            if(current==1)
+            {
+                if(!years.includes(year))
+                {
+                    var di = "di"+year
+                    years.push(year)
+                    $(".old").append(
+                        "<div class='year'>"+ year +"</div>"
+                    )
+                    $(".drop-info").append(
+                        "<div class='"+di+"'></div>"
+                    )
+
+                }
+                $(".current").append(
+                    '<div class="sheet" align="center"><p class="s-title">' + name + '</p><div class="s-container" align="center" style="background-color: rgb(57, 146, 230);"><a class="s-click" href="'+path+'" target="_blank">Preview</a><a class="s-click" href="Pics/tjpdf.pdf" download="'+ fname +'">Download</a></div></div>'
+                )
+            }
+            else
+            {
+                var di = "di"+year
+                if(!years.includes(year))
+                {
+                    years.push(year)
+                    $(".old").append(
+                        "<div class='year'>"+ year +"</div>"
+                    )
+                    $(".drop-info").append(
+                        "<div class='"+di+"'></div>"
+                    )
+                }
+            }
+        }
+    })
 })
+
+$(".year").click(function(){ //click a year
+        var tyear = parseInt($(this).text())
+        console.log("a")
+
+        $.getJSON("JSON/forms.json", function(data){
+        var years = []
+        for(i=0;i<data.length;i++)
+        {
+            var name= data[i]["name"]
+            var date= data[i]["date"]
+            var path= data[i]["file"]
+            var year= data[i]["year"]
+            var fname = name + path.split(".")[1]
+            var current= parseInt(data[i]["current"])
+
+            if(current!=1)
+            {
+                console.log(data[i])
+                var di = "di"+year
+                if(!years.includes(year))
+                {
+                    years.push(year)
+                    $(".old").append(
+                        "<div class='year'>"+ year +"</div>"
+                    )
+                    $(".drop-info").append(
+                        "<div class='"+di+"'></div>"
+                    )
+                    if(!tyear==year)
+                        $("di"+year).hide()
+                }
+                $("."+di).append(`
+                    <div class="o-sheet">
+                        <div class="date">`+date+`</div>
+                        <div class="o-form">`+name+`</div>
+                        <div class="o-container" align="center" style="background-color: rgb(57, 146, 230);">
+                            <a class="o-click" href="`+path+`" target="_blank">Preview</a>
+                            <a class="o-click" href="`+path+`" download="`+fname+`">Download</a>
+                        </div>
+                    </div>
+                `)
+            }
+        }
+        })
+
+        $(".drop-info").show()
+    })
 
 </script>

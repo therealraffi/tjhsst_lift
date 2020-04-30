@@ -158,7 +158,7 @@
 
                 </div>
                 <div class="si-block"  align="center">
-                    <p class="si-intro">Get real mentoring experience. <br>Become a <span id="big">Mentor</span></p>
+                    <p class="si-intro">Get mentoring experience. <br>Become a <span id="big">Mentor</span></p>
                     <a href="signup.html"><p class="si-signup">Apply</p></a>
                     <div class="s-img" style="background-image:url('Pics/tutor2.jpg')"></div>
                 </div>
@@ -194,40 +194,45 @@
 //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 
 $(window).on("load", function() {
+    ///////////////////////////////////////////////////////
+    $(".a-quote").css("opacity","0")
+    /////////////////////////////////////////////////////////////////
     $(".active").css("color","rgb(140, 180, 255)")
-    $(".a-quote").fadeIn()
     var pos = $(document).scrollTop();
-    if(pos>=560){
+
+    if(pos>=560){ // on page refresh
         $(".navigation").css("background-color", "white")
         $(".navigation a").css("color", "black")
-        $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+        $(".logo").css("filter","invert(100%)")
 
     }
-    else{
-        $(".navigation").css("background-color", "transparent")
-        $(".navigation a").css("color", "white")
-        $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
-        if($(".navigation:hover").length==1)
-            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
-    }
-
 
     $(window).scroll(function(){
-    var pos = $(document).scrollTop();
-    if(pos>=560){
-        $(".navigation").css("background-color", "white")
-        $(".navigation a").css("color", "black")
-        $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+        var pos = $(document).scrollTop();
+        var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        if(pos>=560){ // change logo color on hover
+            $(".navigation").css("background-color", "white")
+            $(".navigation a").css("color", "black")
+            $(".logo").css("filter","invert(100%)")
 
-    }
-    else{
-        $(".navigation").css("background-color", "transparent")
-        $(".navigation a").css("color", "white")
-        $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
-        if($(".navigation:hover").length==1)
-            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
         }
-    });
+        else{
+            $(".navigation").css("background-color", "transparent")
+            $(".navigation a").css("color", "white")
+            $(".logo").css("filter","invert(0%)")
+        }
+
+       ////////////////////////////////////////////////////////////////////////////////////////
+        var objectBottom = $(".a-quote").offset().top + $(".a-quote").outerHeight();
+        /* If the element is completely within bounds of the window, fade it in */
+        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(".a-quote").css("opacity")==0) {
+                $(".a-quote").fadeTo(500,1);
+            }
+        } 
+        ////////////////////////////////////////////////////////////////////////////////////////
+        
+    }).scroll();
 
     //alternating quotes
     var from = [ "Margeta Cacti", "Ruth C. Avery","Allen Gueri","Mark L. Jones"]

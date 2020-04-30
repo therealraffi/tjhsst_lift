@@ -12,9 +12,6 @@ body{
     top:35vh;
     position: relative;
     padding: 5vh 0;
-    background-image:
-    linear-gradient(to right, rgba(0, 140, 255, 0.164), white),
-    url('../Pics/hills.jpeg');
 
     background-size: 45%;
     background-color: white;
@@ -105,10 +102,18 @@ body{
     font-family: 'PT Sans', sans-serif;
 }
 
+.c-title{
+    color: rgb(37, 37, 37);
+    font-size: 5vh;
+    margin:0 0 2vh 3%;
+    font-family: 'Poppins', sans-serif;
+}
+
 .sheet{
-    height: 12vh;
-    width: 95%;
-    margin:4vh;
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin:3vh;
     border-radius: 6vh;
     transition: all ease 0.2s;
     background-color: rgba(140, 228, 255, 0.603);
@@ -120,11 +125,18 @@ body{
     box-shadow: 1px 9px 6px #777;}
 
 .s-container{
-    float:right;
+    top:0;
+    position: absolute;
     height: 100%;
-    width:60%;
-    border-top-right-radius: 6vh;
-    border-bottom-right-radius:6vh;
+    width:100%;
+    border-radius:6vh;
+    opacity: 0;
+    transition:all ease 0.2s;
+
+}
+
+.s-container:hover{
+    opacity: .95;
 }
 
 .sheet p,a{
@@ -133,28 +145,188 @@ body{
 }
 
 .s-title{
+    position: relative;
+    bottom:10%;
     display: inline-block;
     color: rgb(37, 37, 37);
-    font-size: 5vh;
-    margin:2vh 0 0 3%;
+    font-size: 3vh;
+    margin-left:2%;
 }
 
 .s-click{
-    color: rgb(240, 240, 240);
-    font-size: 2.5vh;
     display: inline-block;
     width:25%;
-    margin: 2vh 6%;
+    margin: 2% 6%;
     padding:1.8vh 2vh;
     border:solid white 1px;
+    background-color: rgb(57,146,230);
+    color: rgb(240, 240, 240);
+    font-size: 2.5vh;
     border-radius: 3vh;
     transition:all ease 0.2s;
 }
 
 .s-click:hover{
-    color: rgb(80, 80, 80);
+    color: rgb(57,146,230);
     background-color: white;
-    border:solid white 1px;
-    border-radius: 3vh;
+}
+
+.old{
+    padding:3vh;
+}
+
+.year{
+    font-size: 2.2vh;
+    margin:0 1% 0 0;
+    padding:2vh 6vh;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 157, 77, 0.89);
+    display: inline-block;
+    font-family: 'Noto sans', sans-serif !important;
+    border: 3px  solid rgb(255, 255, 255);
+    border-radius: 4vh;
+    transition: all ease 0.2s;
+}
+
+.year:hover{
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgba(255, 157, 77, 0.89);
+    color: rgba(255, 157, 77, 0.89);
     cursor: pointer;
+
+}
+
+.o-sheet{
+    position: relative;
+    display: inline-block;
+    width:45%;
+    margin: 1% 2%;
+    font-size: 3vh ;
+    border-radius: 3vh;
+    font-family: 'Poppins', sans-serif;
+    transition:all ease 0.2s;
+}
+
+.date{
+    padding: 2%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    width:15%;
+    font-size: 4vh ;
+    border-top-left-radius: 4vh;
+    border-bottom-left-radius: 4vh;
+    margin:0;
+    z-index: 1;
+}
+
+.o-form{
+    background-color: rgb(255, 255, 255);
+    font-size: 4vh;
+    padding: 2%;
+    color: rgba(255, 157, 77, 0.89);
+    border-top-right-radius: 4vh;
+    border-bottom-right-radius: 4vh;
+    width:70%;
+    display: inline-block;
+}
+
+.o-container{
+    top:0;
+    position: absolute;
+    padding: 2%;
+    width:70.5%;
+    left:19.8%;
+    border-top-right-radius: 4vh;
+    border-bottom-right-radius: 4vh;
+    transition:all ease 0.2s;
+    opacity: .0;
+}
+
+.o-click{
+    display: inline-block;
+    width:25%;
+    padding:1.5vh 2vh;
+    margin:0 5%;
+    border:solid white 1px;
+    background-color: rgb(57,146,230);
+    color: rgb(240, 240, 240);
+    font-size: 2vh;
+    border-radius: 3vh;
+    transition:all ease 0.2s;
+}
+
+.o-click:hover{
+    color: rgb(57,146,230);
+    background-color: white;
+}
+
+.o-container:hover{
+    opacity: .95;
+}
+
+.drop-info{
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 157, 77, 0.89) 40%, rgb(253, 185, 129));
+}
+
+.drop-info p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.d-title{
+    font-size: 6vh;
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0 0 2vh 0;
+}
+
+
+.close{
+    position: absolute !important;
+    top:1% !important;
+    left:2% !important;
+    padding: 1vh;
+    margin: 0;
+    font-family: 'Nunito', sans-serif !important;
+    position: relative;
+    display: inline-block;
+    font-size: 3.8vh !important;
+    left: 1%;
+    transition: all ease 0.3s;
+}
+
+.close:hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.right {
+    right:15%;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    left:15%;
+transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+}
+
+i {
+    position: absolute;
+    top:37%;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3vh 3vh 0;
+    display: inline-block;
+    padding:4vh;
+    transition: all ease .1s;
+}
+
+i:hover{
+    cursor: pointer;
+    border: solid rgba(255, 255, 255, 0.712);
+    border-width: 0 3vh 3vh 0;
+    padding:4.6vh;
 }
