@@ -31,21 +31,106 @@
                 <p class="c-title">Forms</p>
             </div>
             <div class="old">
+                <div class='year'>2018</div>
+                <div class='year'>2019</div>
+                <div class='year'>2020</div>
             </div>
             <div class="drop-info">
                 <p class="close" align="left">x</p>
                 <p class="d-title" align="center">Title</p>
+                <div class="o-sheet">
+                    <div class="date"></div>
+                    <div class="o-form">Sheet1</div>
+                    <div class="o-container" align="center">
+                        <a class="o-click" href="Pics/tjpdf.pdf" target="_blank">Preview</a>
+                        <a class="o-click" href="Pics/tjpdf.pdf" download="tjpdf.pdf">Download</a>
+                    </div>
+                </div>
+                <div class="o-sheet">
+                    <div class="date"></div>
+                    <div class="o-form">Sheet1</div>
+                    <div class="o-container" align="center">
+                        <a class="o-click" href="Pics/tjpdf.pdf" target="_blank">Preview</a>
+                        <a class="o-click" href="Pics/tjpdf.pdf" download="tjpdf.pdf">Download</a>
+                    </div>
+                </div>
+                <div class="o-sheet">
+                    <div class="date"></div>
+                    <div class="o-form">Sheet1</div>
+                    <div class="o-container" align="center">
+                        <a class="o-click" href="Pics/tjpdf.pdf" target="_blank">Preview</a>
+                        <a class="o-click" href="Pics/tjpdf.pdf" download="tjpdf.pdf">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar" align="center">
+                <p class="c-title" align="left">Calendar</p>
+                <div class="calendar-block">
+                        <div class="month">      
+                            <ul>
+                                <li class="prev">&#10094;</li>
+                                <li class="next">&#10095;</li>
+                                <li>
+                                August<br>
+                                <span style="font-size:18px">2017</span>
+                                </li>
+                            </ul>
+                        </div>
+                            
+                        <ul class="weekdays">
+                            <li>Mo</li>
+                            <li>Tu</li>
+                            <li>We</li>
+                            <li>Th</li>
+                            <li>Fr</li>
+                            <li>Sa</li>
+                            <li>Su</li>
+                        </ul>
+                        <div class="all-days" align="left">
+                                <ul class="days">  
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    <li>8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
+                                    <li>12</li>
+                                    <li>13</li>
+                                    <li>14</li>
+                                    <li>15</li>
+                                    <li>16</li>
+                                    <li>17</li>
+                                    <li>18</li>
+                                    <li>19</li>
+                                    <li>20</li>
+                                    <li>21</li>
+                                    <li>22</li>
+                                    <li>23</li>
+                                    <li>24</li>
+                                    <li>25</li>
+                                    <li>26</li>
+                                    <li>27</li>
+                                    <li>28</li>
+                                    <li>29</li>
+                                    <li>30</li>
+                                    <li>31</li>
+                                </ul>
+                        </div>
+                </div>
             </div>
         </div>
     </body>
 </html>
 
-<script type="text/javascript" src="JSON/forms.json"></script>
 <script>
 
 $(window).on("load", function() {
     $(".active").css("color","rgb(200, 200, 255)")
-    $(".drop-info").hide()
 
     $(window).scroll(function(){
         var pos = $(document).scrollTop();
@@ -61,29 +146,28 @@ $(window).on("load", function() {
         }
     });
 
-    $(".t-block").click(function(){
-        $(".t-block").css("filter", "brightness(100%)")
-        $(this).css("filter", "brightness(40%)").fadeIn()
-        var image = $(this).children(".thumbnail").css("background-image").replace("(", "").replace(")", "")
-        image = image.substring(image.lastIndexOf("Pics"), image.length-1)
-        console.log(image)
+    $(".year").click(function(){
+        $(".year").css("background-color", "rgba(255, 157, 77, 0.89)")
+        $(this).css("background-color", "rgb(255, 204, 162)").fadeIn()
         var title = $(this).text()
-        var sub  = $(this).parent().parent().parent().parent().parent().parent().attr("class")
-        var drop = "#drop-" + sub
-        $(drop+" .d-title").text(title)
-        $(drop).children(".slides").children("#s-img").attr("src", image)
-        $(drop).slideDown()
+        $(".date").text("1/3/"+title.substring(2))
+        $(".drop-info").children(".d-title").text("Forms from "+title)
+        $(".drop-info").slideDown()
     })
 
     $(".close").click(function(){
         $(this).parent().slideUp()
-        $(".t-block").css("filter", "brightness(100%)")
+        $(".year").css("filter", "brightness(100%)")
     })
+    
 
-    var d = JSON.parse(forms)
-    console.log(d[0])
-
-    $.getJSON("JSON/forms.json", function(data){ //load current forms
+    let requestURL = "https://raw.githubusercontent.com/therealraffi/tjhsst_lift/master/JSON/forms.json"
+    let request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        data = request.response
         var years = []
         for(i=0;i<data.length;i++)
         {
@@ -93,89 +177,58 @@ $(window).on("load", function() {
             var year= data[i]["year"]
             var fname = name + path.split(".")[1]
             var current= parseInt(data[i]["current"])
-
+            console.log(current)
             if(current==1)
             {
                 if(!years.includes(year))
                 {
-                    var di = "di"+year
-                    years.push(year)
-                    $(".old").append(
-                        "<div class='year'>"+ year +"</div>"
-                    )
-                    $(".drop-info").append(
-                        "<div class='"+di+"'></div>"
-                    )
+                    // var di = "di"+year
+                    // years.push(year)
+                    // $(".old").append(
+                    //     "<div class='year'>"+ year +"</div>"
+                    // )
+                    // $(".drop-info").append(
+                    //     "<div class='"+di+"'></div>"
+                    // )
 
                 }
                 $(".current").append(
                     '<div class="sheet" align="center"><p class="s-title">' + name + '</p><div class="s-container" align="center" style="background-color: rgb(57, 146, 230);"><a class="s-click" href="'+path+'" target="_blank">Preview</a><a class="s-click" href="Pics/tjpdf.pdf" download="'+ fname +'">Download</a></div></div>'
                 )
             }
-            else
-            {
-                var di = "di"+year
-                if(!years.includes(year))
-                {
-                    years.push(year)
-                    $(".old").append(
-                        "<div class='year'>"+ year +"</div>"
-                    )
-                    $(".drop-info").append(
-                        "<div class='"+di+"'></div>"
-                    )
-                }
-            }
+            // else
+            // {
+            //     var di = "di"+year
+            //     if(!years.includes(year))
+            //     {
+            //         years.push(year)
+            //         $(".old").append(
+            //             "<div class='year'>"+ year +"</div>"
+            //         )
+            //         $(".drop-info").append(
+            //             "<div class='"+di+"'></div>"
+            //         )
+            //     }
+            //     $("."+di).append(`
+            //         <div class="o-sheet">
+            //             <div class="date">`+date+`</div>
+            //             <div class="o-form">`+name+`</div>
+            //             <div class="o-container" align="center" style="background-color: rgb(57, 146, 230);">
+            //                 <a class="o-click" href="`+path+`" target="_blank">Preview</a>
+            //                 <a class="o-click" href="`+path+`" download="`+fname+`">Download</a>
+            //             </div>
+            //         </div>
+            //     `)
+            // }
         }
-    })
+    }
+    var tti =  document.getElementsByClassName("c-title")
+    console.log(tti)
+    tti.runclick = function() {
+        console.log("ypp");
+        $(".drop-info").hide()
+    };
+
 })
-
-$(".year").click(function(){ //click a year
-        var tyear = parseInt($(this).text())
-        console.log("a")
-
-        $.getJSON("JSON/forms.json", function(data){
-        var years = []
-        for(i=0;i<data.length;i++)
-        {
-            var name= data[i]["name"]
-            var date= data[i]["date"]
-            var path= data[i]["file"]
-            var year= data[i]["year"]
-            var fname = name + path.split(".")[1]
-            var current= parseInt(data[i]["current"])
-
-            if(current!=1)
-            {
-                console.log(data[i])
-                var di = "di"+year
-                if(!years.includes(year))
-                {
-                    years.push(year)
-                    $(".old").append(
-                        "<div class='year'>"+ year +"</div>"
-                    )
-                    $(".drop-info").append(
-                        "<div class='"+di+"'></div>"
-                    )
-                    if(!tyear==year)
-                        $("di"+year).hide()
-                }
-                $("."+di).append(`
-                    <div class="o-sheet">
-                        <div class="date">`+date+`</div>
-                        <div class="o-form">`+name+`</div>
-                        <div class="o-container" align="center" style="background-color: rgb(57, 146, 230);">
-                            <a class="o-click" href="`+path+`" target="_blank">Preview</a>
-                            <a class="o-click" href="`+path+`" download="`+fname+`">Download</a>
-                        </div>
-                    </div>
-                `)
-            }
-        }
-        })
-
-        $(".drop-info").show()
-    })
 
 </script>
