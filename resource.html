@@ -67,13 +67,27 @@
                 <p class="c-title" align="left">Calendar</p>
                 <div class="calendar-block">
                         <div class="month">      
-                            <ul>
+                            <ul class="current-month">
                                 <li class="prev">&#10094;</li>
                                 <li class="next">&#10095;</li>
-                                <li>
-                                August<br>
-                                <span style="font-size:18px">2017</span>
+                                <li class="month-name">
+                                        <div class="mn">August</div>
+                                        <span style="font-size:18px">2020</span>
                                 </li>
+                            </ul>
+                            <ul class="all-months">
+                                    <li id="january">Jan</li>
+                                    <li id="febuary">Feb</li>
+                                    <li id="march">Mar</li>
+                                    <li id="april">Apr</li>
+                                    <li id="may">May</li>
+                                    <li id="june">Jun</li>
+                                    <li id="july">Jul</li>
+                                    <li id="august">Aug</li>
+                                    <li id="september">Sept</li>
+                                    <li id="october">Oct</li>
+                                    <li id="november">Nov</li>
+                                    <li id="december">Dec</li>
                             </ul>
                         </div>
                             
@@ -86,7 +100,7 @@
                             <li>Sa</li>
                             <li>Su</li>
                         </ul>
-                        <div class="all-days" align="left">
+                        <div class="all-days" align="center">
                                 <ul class="days">  
                                     <li>1</li>
                                     <li>2</li>
@@ -119,6 +133,17 @@
                                     <li>29</li>
                                     <li>30</li>
                                     <li>31</li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li>6</li>
+                                    <li>7</li>
+                                    <li>8</li>
+                                    <li>9</li>
+                                    <li>10</li>
+                                    <li>11</li>
                                 </ul>
                         </div>
                 </div>
@@ -131,6 +156,8 @@
 
 $(window).on("load", function() {
     $(".active").css("color","rgb(200, 200, 255)")
+    $(".all-months").hide()
+    $(".drop-info").hide()
 
     $(window).scroll(function(){
         var pos = $(document).scrollTop();
@@ -158,6 +185,73 @@ $(window).on("load", function() {
     $(".close").click(function(){
         $(this).parent().slideUp()
         $(".year").css("filter", "brightness(100%)")
+    })
+
+    $(".month-name").click(function(){
+        setTimeout(function(){
+            $(".all-months").fadeIn()
+            $(".month").css("background","rgb(121, 48, 189)")            
+
+        },400)
+        $(".current-month").fadeOut()
+        $(".month").css("background","rgb(30, 156, 150)")
+    })
+
+
+    $(".all-months li").click(function(){
+        var name = $(this).attr("id")
+        setTimeout(function(){
+            $(".month").css("background","rgb(30, 156, 150)")
+            console.log(name)
+            $(".mn").text(name)
+            $(".current-month").fadeIn()
+
+            var months = [['january', 31, 6], ['february', 28, 2], ['march', 31, 2], ['april', 30, 5], ['may', 31, 0], ['june', 30, 3], ['july', 31, 5], ['august', 31, 1], ['september', 30, 4], ['october', 31, 6], ['november', 30, 2], ['december', 31, 4]]
+            for(i=0;i<months.length;i++)
+            {
+                if(months[i][0]==name)
+                {
+                    var li =$(".days").children()
+
+                    var first = months[i][2]
+                    var mlen = months[i][1]
+                    var place = 0
+                    if(i!=0)
+                        var start = months[i-1][1]-first
+                    else
+                        var start = months[11][1]-first
+
+                        //this month rgb(36, 36, 36)
+                        //not this month rgb(133, 133, 133)
+
+                    $('.days').children().each(function(){
+                        if(place < first){
+                            $(this).text(place+start)
+                            $(this).css("color","rgb(175, 175, 175)")
+                        }
+                        else if(place >= first && place-first< mlen){
+                            $(this).css("color","rgb(36, 36, 36)")
+                            $(this).text(place-first+1)
+
+                        }
+                        else{
+                            $(this).css("color","rgb(175, 175, 175)")
+                            $(this).text(place-mlen-first+1)
+                        }
+                        if((place+1)%7==0)
+                        {
+                            $(this).addClass("school")
+                        }
+                        place++;
+
+                    })
+                }
+            }
+
+        },400)
+        $(".all-months").fadeOut()
+        $(".month").css("background","rgb(121, 48, 189)")
+
     })
     
 
