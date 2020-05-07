@@ -120,6 +120,10 @@
             </div>
             <!-- <iframe class="sheet" id="mentee-sheet" src="https://docs.google.com/forms/d/e/1FAIpQLSd98bTmhI4JZZS1qpZDhE5-iHt6RsZex9J25G3sk7Hx1_jLhA/viewform?embedded=true" width="1000" height="407" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             <iframe class="sheet" id="mentor-sheet" src="https://docs.google.com/forms/d/e/1FAIpQLSfUwp0AKqZs_xbbHULcoPHBBougffgaaOC3jK4xA-qEDiUdCA/viewform?embedded=true" width="640" height="1625" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+            <div class="bottom" align="center">
+                <p class="bp">info@tjhsstliftmentor.org</p>
+                <p class="bp">No Copyright © TJ Lift Mentorship. All rights not reserved 2020.</p>
+            </div>
         </div>
     </body>
 </html>
@@ -134,15 +138,16 @@ $(window).on("load", function() {
 
     $(window).scroll(function(){
         var pos = $(document).scrollTop();
-        if(pos>=240){
+        if(pos>=240){ // change logo color on hover
             $(".navigation").css("background-color", "white")
             $(".navigation a").css("color", "black")
-            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+            $(".logo").css("filter","invert(100%)")
+
         }
         else{
             $(".navigation").css("background-color", "transparent")
             $(".navigation a").css("color", "white")
-            $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
+            $(".logo").css("filter","invert(0%)")
         }
     });
 

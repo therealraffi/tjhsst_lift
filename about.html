@@ -130,6 +130,10 @@
                 <p class="c-title">Contact Us</p>
                 <p class="c-desc">Reach out to us at <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWxkpQBWnjlRDkhGBDsXmlsZMwmlvbBdwFjlvSPMmkSnlTTrmbKHgnNLhBQdPHFbwqffg" target="_blank" class="clink">tjlift@gmail.com</a> or fill out <a href="https://docs.google.com/forms/d/1H2rdDc11oZ-wf-4CKQ7by0GcDQi6rC-BDvN85shBZQ8/edit" target="_blank" class="clink">this form</a></p>
             </div>
+            <div class="bottom" align="center">
+                <p class="bp">info@tjhsstliftmentor.org</p>
+                <p class="bp">No Copyright © TJ Lift Mentorship. All rights not reserved 2020.</p>
+            </div>
         <div>
 
         </div>
@@ -148,15 +152,16 @@
         
             $(window).scroll(function(){
             var pos = $(document).scrollTop();
-            if(pos>=240){
+            if(pos>=240){ // change logo color on hover
                 $(".navigation").css("background-color", "white")
                 $(".navigation a").css("color", "black")
-                $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+                $(".logo").css("filter","invert(100%)")
+
             }
             else{
                 $(".navigation").css("background-color", "transparent")
                 $(".navigation a").css("color", "white")
-                $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
+                $(".logo").css("filter","invert(0%)")
             }
             });
         })

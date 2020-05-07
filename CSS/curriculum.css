@@ -11,7 +11,6 @@ body{
     top:35vh;
     position: relative;
     background-color:white;
-    padding-bottom: 6vh;
     z-index: 0;
 }
 
@@ -50,13 +49,12 @@ body{
 .navigation a:hover{
     color: rgb(140, 180, 255) !important;
 }
-
 .navigation:hover .logo{
-    background-image: url("../Pics/tjlogo2.png");
+    filter: invert(100%) !important;
 }
 
 .logo:hover{
-    background-color: rgb(212, 226, 255);
+    background-color: rgb(92, 52, 0) !important;
 }
 
 .logo{
@@ -70,7 +68,6 @@ body{
     position: absolute;
     left: 4vh;
     transition: all ease 0.1s;
-
 }
 
 
@@ -393,13 +390,13 @@ body{
 }
 
 .right {
-    right:15%;
+    right:10%;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 
 .left {
-    left:15%;
+    left:10%;
 transform: rotate(135deg);
 -webkit-transform: rotate(135deg);
 }
@@ -419,5 +416,20 @@ i:hover{
     border: solid rgba(255, 255, 255, 0.712);
     border-width: 0 3vh 3vh 0;
     padding:4.6vh;
+}
+
+.bottom{
+    margin-top: 10vh;
+    background-color: rgb(37, 112, 224);
+    overflow: hidden;
+    bottom:0;
+    padding:6vh  0  2vh 0;
+}
+
+.bp{
+    margin:2vh;
+    font-size:2vh;
+    color:rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
 }
 

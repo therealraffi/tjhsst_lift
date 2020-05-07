@@ -17,7 +17,7 @@ def makear(first):
         31
     ]
 
-    names= ["January","Febuary","March","April","May","June","July",
+    names= ["January","February","March","April","May","June","July",
             "August","September","October","November","December"]
 
     colors = [

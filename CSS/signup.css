@@ -16,7 +16,7 @@ body{
     background-color: white;
     background-repeat: repeat-y;
     
-    padding: 5vh 0;
+    padding: 5vh 0 0 0;
 }
 
 .navigation{
@@ -54,13 +54,12 @@ body{
 .navigation a:hover{
     color: rgb(140, 180, 255) !important;
 }
-
 .navigation:hover .logo{
-    background-image: url("../Pics/tjlogo2.png");
+    filter: invert(100%) !important;
 }
 
 .logo:hover{
-    background-color: rgb(212, 226, 255);
+    background-color: rgb(92, 52, 0) !important;
 }
 
 .logo{
@@ -257,4 +256,19 @@ select{
     color:white !important;
     border: 2px white solid !important;
     background-color: rgb(83, 206, 228) !important;
+}
+
+.bottom{
+    margin-top: 10vh;
+    background-color: rgb(37, 112, 224);
+    overflow: hidden;
+    bottom:0;
+    padding:6vh  0  2vh 0;
+}
+
+.bp{
+    margin:2vh;
+    font-size:2vh;
+    color:rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
 }

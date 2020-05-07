@@ -129,7 +129,7 @@
                         </tr>
                     </table>
                 </div>
-                <p class="see-more">See worksheets →</p>
+                <a href="resource.html"><p class="see-more">See worksheets →</p></a>
             </div>
             <div class="english">
                 <p class="sub-title">English</p>
@@ -153,6 +153,10 @@
                 </div>
                 <p class="see-more">See worksheets →</p>
             </div>
+            <div class="bottom" align="center">
+                <p class="bp">info@tjhsstliftmentor.org</p>
+                <p class="bp">No Copyright © TJ Lift Mentorship. All rights not reserved 2020.</p>
+            </div>
         </div>
         </div>
     </body>
@@ -169,15 +173,16 @@ $(window).on("load", function() {
 
     $(window).scroll(function(){
     var pos = $(document).scrollTop();
-        if(pos>=240){
+    if(pos>=240){ // change logo color on hover
             $(".navigation").css("background-color", "white")
             $(".navigation a").css("color", "black")
-            $(".logo").css("background-image","url('Pics/tjlogo2.png')")
+            $(".logo").css("filter","invert(100%)")
+
         }
         else{
             $(".navigation").css("background-color", "transparent")
             $(".navigation a").css("color", "white")
-            $(".logo").css("background-image","url('Pics/tjlogo2-light.png')")
+            $(".logo").css("filter","invert(0%)")
         }
     });
 
@@ -186,12 +191,76 @@ $(window).on("load", function() {
         $(this).css("filter", "brightness(40%)").fadeIn()
         var image = $(this).children(".thumbnail").css("background-image").replace("(", "").replace(")", "")
         image = image.substring(image.lastIndexOf("Pics"), image.length-1)
-        console.log(image)
         var title = $(this).text()
         var sub  = $(this).parent().parent().parent().parent().parent().parent().attr("class")
         $(".drop-info .d-title").text(sub + ": " +title)
-        $(".drop-info .d-title").attr("src", image)
+        $("#s-img").attr("src", image)
         $(".drop-info").fadeIn()
+
+    })
+
+
+    $("i").on("click",function(){
+        var image = $(this).parent().children("#s-img").attr("src").replace("(", "").replace(")", "")
+
+        var list = $(".t-block").children()
+        var image=  $("#s-img").attr("src").replace("(", "").replace(")", "")
+        var  arrow = $(this).attr("class")
+
+        for(i=0;i<list.length;i=i+2)
+        {
+            timg  = list[i].style.backgroundImage.replace("(", "").replace(")", "")
+            timg=timg.substring(timg.lastIndexOf("Pics"), timg.length-1)
+
+            if(timg==image)
+            {
+
+                if(arrow=="left")
+                {
+                    
+                    if(i==0)
+                        var place = list.length-2
+                    else
+                        var place = i-2
+
+                    var par = list[place].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.className
+                    nimg  = list[place].style.backgroundImage.replace("(", "").replace(")", "")
+                    nimg=nimg.substring(nimg.lastIndexOf("Pics"), nimg.length-1)
+                    ntitle = list[place+1].textContent
+                    $("#s-img").attr("src", nimg)
+                    $(".d-title").text(par+": "+ntitle)
+                    $(".t-block").css("filter", "brightness(100%)")
+                    console.log(list[place].parentElement)
+                    list[place].parentElement.style.filter = "brightness(60%)"
+
+                }
+                else{
+                    if(i==list.length-2)
+                        var place = 0
+                    else
+                        var place = i+2
+                        
+                    setTimeout(function(){
+                        var par = list[place].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.className
+                        nimg  = list[place].style.backgroundImage.replace("(", "").replace(")", "")
+                        nimg=nimg.substring(nimg.lastIndexOf("Pics"), nimg.length-1)
+                        ntitle = list[place+1].textContent
+                        $("#s-img").attr("src", nimg).fadeIn()
+                        $(".d-title").text(par+": "+ntitle).fadeIn()
+                        $(".t-block").css("filter", "brightness(100%)")
+                        $(".d-desc").fadeIn()
+                        $(".dates").fadeIn()
+                        list[place].parentElement.style.filter = "brightness(60%)"
+                    },100)
+                    $("#s-img").fadeOut(100)
+                    $(".d-title").fadeOut(100)
+                    $(".d-desc").fadeOut(100)
+                    $(".dates").fadeOut(100)
+                }
+                break;
+            }
+
+        }
     })
 
     $(".close").click(function(){

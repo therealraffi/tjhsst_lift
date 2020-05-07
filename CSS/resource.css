@@ -53,13 +53,12 @@ body{
 .navigation a:hover{
     color: rgb(140, 180, 255) !important;
 }
-
 .navigation:hover .logo{
-    background-image: url("../Pics/tjlogo2.png");
+    filter: invert(100%) !important;
 }
 
 .logo:hover{
-    background-color: rgb(212, 226, 255);
+    background-color: rgb(92, 52, 0) !important;
 }
 
 .logo{
@@ -102,18 +101,50 @@ body{
     font-family: 'PT Sans', sans-serif;
 }
 
+
+
+
+
+.select-bar{
+    height: 18vh;
+    width: 100%;
+}
+.select{
+    display: inline-block;
+    width:30%;
+    margin: 0;
+    cursor: pointer;
+    padding: 1vh 0 2vh 0;
+    font-size: 4vh;
+    font-family: 'Noto Sans', sans-serif;
+    transition:all ease 0.3s;
+
+}
+
 .c-title{
     color: rgb(37, 37, 37);
-    font-size: 5vh;
-    margin:0 0 2vh 3%;
-    font-family: 'Poppins', sans-serif;
+    font-size: 7vh;
+    margin:0 0 2vh 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.mline{
+    margin: 6vh 0 2vh 0;
+    border: 0;
+    text-align: center;
+}
+
+.mline::before {
+    content: "\2022 \ \2022 \ \2022 \ \2022 \ \2022";
+    font-size: 50px;
+    color: rgb(202, 79, 126);
 }
 
 .sheet{
     position: relative;
     display: inline-block;
-    width: 45%;
-    margin:3vh;
+    width: 42%;
+    margin:3vh 4vh;
     border-radius: 6vh;
     transition: all ease 0.2s;
     background-color: rgba(140, 228, 255, 0.603);
@@ -176,9 +207,9 @@ body{
 }
 
 .year{
-    font-size: 2.2vh;
+    font-size: 3vh;
     margin:0 1% 0 0;
-    padding:2vh 6vh;
+    padding:2.5vh 7vh;
     color: rgb(255, 255, 255);
     background-color: rgba(255, 157, 77, 0.89);
     display: inline-block;
@@ -467,4 +498,23 @@ i:hover{
 
   .school:hover{
     opacity:100%;
+}
+
+.today{
+    color:rgb(88, 146, 255) !important;
+}
+
+.bottom{
+    margin-top: 10vh;
+    background-color: rgb(37, 112, 224);
+    overflow: hidden;
+    bottom:0;
+    padding:6vh  0  2vh 0;
+}
+
+.bp{
+    margin:2vh;
+    font-size:2vh;
+    color:rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
 }
