@@ -375,7 +375,7 @@ i:hover{
 }
 
 .all-months li:hover{
-    color: rgb(121, 48, 189) !important;
+    color: #666 !important;
     background-color: rgb(255, 255, 255) !important;
 }
 
@@ -430,7 +430,7 @@ i:hover{
   }
   
   .days {
-    padding: 0;
+    padding: 1vh 1vh 3vh 1vh;
     background: #eee;
     margin: 0;
     border-bottom-left-radius: 6vh;
@@ -438,18 +438,33 @@ i:hover{
   }
   
   .days li {
+    position: relative;
     list-style-type: none;
     display: inline-block;
-    width: 13.6%;
-    margin: 0;
+    margin:0.5vh;
+    width: 13%;
+    border-radius: 1vh;
     text-align: center;
     font-size: 2.2vh;
-    padding:2vh 0;
+    padding:1.5vh 0;
     color: #777;
     transition: all ease 0.2s;
   }
   
 .school {
     background-color: #1abc9c;
+    cursor: pointer;
+    color: white !important;
+    transition: all ease 0.2s;
+  }
+
+  .noschool {
+    cursor: pointer;
+    background-color: #e45353;
     color: white !important
   }
+
+
+  .school:hover{
+    opacity:100%;
+}

@@ -17,14 +17,18 @@ def makear(first):
         31
     ]
 
-    names= ["January","February","March","April","May","June","July",
+    names= ["January","Febuary","March","April","May","June","July",
             "August","September","October","November","December"]
+
+    colors = [
+        "#FF86C2","#DD597D","#FF7373","#A41CC6","#DD88FD","#AD8BFE", "#4985D6", "#2FAACE", "#9999FF",	"#99C7FF",	"#A8E4FF",	"#75ECFD"
+    ]
 
     place = first 
     ar = []
     for i in range(len(months)):
         print(place)
-        ar.append([names[i].lower(),months[i],place]) 
+        ar.append([names[i].lower(),months[i],place, colors[i]]) 
         place = (months[i] + place)%7
     print(ar)
 
