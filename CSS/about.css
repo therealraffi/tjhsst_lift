@@ -7,13 +7,11 @@ body{
     z-index: 0;
 }
 .main{
-    top:35vh;
+    top:45vh;
     position: relative;
     background-color:white;
-    background-image: linear-gradient(to right, rgba(0, 195, 255, 0.192), rgb(255, 255, 255)), url('../Pics/hills.jpeg');
-    background-size: 79.3%;
-    background-repeat: repeat-y;
-    padding: 5vh 0 0 0;
+
+    padding: 10vh 0 0 0;
 }
 
 .navigation{
@@ -77,6 +75,8 @@ body{
     top:0;
     position: fixed;
     background-color: rgb(82, 109, 228);
+    background-image: linear-gradient(to bottom, rgba(91, 66, 235, 0.336) 45%, rgba(255, 255, 255, 0)), url('../Pics/teamwork.jpg');
+    background-size: cover;
     width: 100%;
     height: 50vh;
     overflow: hidden;
@@ -100,47 +100,56 @@ body{
 }
 
 .i-block{
+    position: relative;
+    background-color:white;
     margin:0;
-    width:100%;
+    padding: 0;
+    width:90%;
+    height: 50vh;
     vertical-align: top;
     transition: all .2s ease;
+    border-radius: 4vh;
+    box-shadow: 1px 10px 40px rgba(0, 19, 124, 0.582);
+    overflow: hidden;
 }
+
+.i-block:hover{
+    box-shadow: 1px 5px 15px rgba(0, 16, 107, 0.808);
+}
+
 .display{
     display:inline-block;
-    width:40%;
-    height: 35vh;
-    max-height: 45vh;
-    padding: 3vh 3vh;
+    position: absolute;
+    right:0;
+    top:0;
+    width:48%;
+    height: 100%;
+    background-image: url("../Pics/teens_school.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     vertical-align: top;
 }
 .exp{
+    position: absolute;
+    left:3%;
+    top:6%;
     display:inline-block;
-    width:40%;
-    height: 35vh;
-    padding:3vh 5vh;
-    vertical-align: center;
+    width:47%;
+    max-height: 85%;
+    vertical-align: top;
+    color:rgb(80, 80, 80);
+    font-size: 2.3vh;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin:0;
 }
 
 .i-title{
     color:rgb(65, 65, 65);
-    font-size: 4vh;
+    font-size: 5vh;
     font-family: 'Poppins', sans-serif;
     margin: 0.5vh 0vh;
-}
-.i-para{
-    color:rgb(80, 80, 80);
-    font-size: 2vh;
-    font-family: 'Poppins', sans-serif;
-    margin:0;
-}
-
-.i-img{
-    position:relative;
-    max-height: 100%;
-
-    transition: all .2s ease;
-    border-radius: 5% 5% 5% 5% / 5% 5% 5% 5% ;
-    box-shadow: 20px 20px rgba(0,0,0,.25);
 }
 
 .i-block:hover img{
@@ -151,18 +160,14 @@ body{
 
 .quote{
     padding:0;
-    margin:5vh;
+    margin:15vh 0;
     height:16vh;
     display: inline-block;
     width: 90%;
-    color:rgb(80, 80, 80);
+    color:rgb(31, 31, 31);
     font-size: 5vh;
     font-family: 'Noto Sans', sans-serif;
     transition: all ease 0.2s;
-}
-
-.quote:hover{
-    font-size: 5.1vh;
 }
 
 .mline{
@@ -178,10 +183,14 @@ body{
 }
 
 .people{
-    padding-top: 1vh;
-    height: 140vh;
+    position: relative;
+    padding: 1vh 0 8vh 0;
     width:100%;
-    background-color: rgba(0, 0, 0, 0.349);
+    background-color: white;
+    background-image: linear-gradient(to bottom, rgba(159, 66, 235, 0.459) 75%, rgb(255, 255, 255)), url('../Pics/triangle.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .member{
@@ -198,7 +207,7 @@ body{
     width:70%;
     height:20vh;
     margin:0.5vh;
-    background-image: url("../Pics/wonho.jpg");
+    background-image: url("../Pics/bhai.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 10vh;
@@ -214,6 +223,31 @@ body{
 
 }
 
+.ex{
+    margin-top: 5vh;
+}
+
+.extra{
+    display: inline-block;
+    width:13%;
+    padding: 1vh 0;
+    margin:1% 1%;
+    color:white;
+    font-size: 3vh;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 2vh;
+    background-color: rgb(216, 84, 84);
+    border: solid transparent 4px;
+    transition: all ease 0.2s;
+}
+
+.extra:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(216, 84, 84);
+    border: solid rgb(216, 84, 84) 4px;
+
+}
+
 .label{
     margin:0;
     color:white;
@@ -222,11 +256,11 @@ body{
 }
 
 .i-line{
-    background-color: white;
-    margin: 1.5vh 0 4vh 0;
-    width:88%;
-    border: 1px solid white;
-    text-align: center;
+    margin: 25px 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    width:75%;
+    border:none;
 }
 
 .p-title{
@@ -237,20 +271,20 @@ body{
 
 .c-title{
     color:rgb(65, 65, 65);
-    font-size: 6vh;
-    font-family: 'Poppins', sans-serif;
+    font-size: 7vh;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0.5vh 0vh;
 }
 
 .contact{
-    padding-top: 2vh;
+    margin: 4vh 5vh;
 }
 
 .c-desc{
     color:rgb(65, 65, 65);
     font-size: 3vh;
     font-family: 'Poppins', sans-serif;
-    margin: 0.5vh 0vh;
+    margin: 4vh 2vh 2vh 2vh;
 }
 
 .clink{
@@ -262,6 +296,83 @@ body{
     text-decoration: underline;
 }
 
+
+.sheet{
+    display: inline-block;
+    width:80%;
+    background-color: transparent !important;
+}
+
+
+.box{
+    padding:2vh;
+    width:100%;
+}
+
+.form label{
+    color:rgb(110, 110, 110);
+    font-size: 2.5vh;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 2vh 0 0;
+}
+
+.form input{
+    border:none;
+    border-bottom:1px solid grey;
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+    height:4vh;
+    width:30%;
+}
+
+textarea{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    height: 50vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: #f8f8f8;
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
+    resize: none;
+}
+
+.apply{
+    border: none;
+    height:40vh;
+}
+
+.any{
+    height: 40vh;
+}
+
+input[type=submit]{
+    width:20%;
+    padding:1vh;
+    height:6vh;
+    border:2px solid grey;
+    border-radius: 1vh;
+    margin:2vh;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+input[type=submit]:hover{
+    border: white;
+    color:white;
+    background-color: rgb(27, 165, 165);
+    width: 20%;
+}
+
+select{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vh;
+    width: 20%;
+
+}
+
+
 .bottom{
     margin-top: 10vh;
     background-color: rgb(37, 112, 224);
@@ -271,7 +382,7 @@ body{
 }
 
 .bp{
-    margin:2vh;
+    margin:2vh 0;
     font-size:2vh;
     color:rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;

@@ -8,7 +8,7 @@ body{
     z-index: 0;
 }
 .main{
-    top:35vh;
+    top:45vh;
     position: relative;
     background-color:white;
     z-index: 0;
@@ -77,6 +77,9 @@ body{
     height: 50vh;
     overflow: hidden;
     background-color: rgba(184, 36, 36, 0.76);
+    background-image: linear-gradient(to bottom, rgba(221, 64, 64, 0.308) 40%, rgba(255, 255, 255, 0)), url('../Pics/study.jpeg');
+    background-size:  cover;
+    background-position: bottom;
     z-index: -3;
 }
 
