@@ -14,10 +14,44 @@
     </head>
     <body>
         <div class="navigation">
-            <a href="about.html">About</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="resource.html">Resources</a>
-            <a href="curriculum.html">Curriculum</a>
+            <div class="drop-menu" align="center" id="ABOUT">
+                    <div class="drop-btn">
+                        <a href="about.html">About</a>
+                    </div>
+                    <ul class="drop-content">
+                        <li><a href="about.html">Our Team</a></li>
+                        <li><a href="about.html">Contact</a></li>
+                    </ul>
+            </div>   
+            <div class="drop-menu" align="center" id="SIGNUP">
+                <div class="drop-btn">
+                    <a href="signup.html">Signup</a>
+                </div>
+                <ul class="drop-content">
+                    <li><a href="signup.html">Mentor</a></li>
+                    <li><a href="signup.html">Mentee</a></li>
+                </ul>
+            </div>
+            <div class="drop-menu" align="center" id="RESROURCES">
+                <div class="drop-btn">
+                    <a href="resource.html">Resources</a>
+                </div>
+                <ul class="drop-content">
+                    <li><a href="resource.html">Materials</a></li>
+                    <li><a href="resource.html">Forms</a></li>
+                    <li><a href="resource.html">Calendar</a></li>
+                </ul>
+            </div>
+            <div class="drop-menu" align="center" id="CURRICULUM">
+                    <div class="drop-btn">
+                        <a href="curriculum.html">Curriculum</a>
+                    </div>
+                    <ul class="drop-content">
+                        <li><a href="curriculum.html">STEM</a></li>
+                        <li><a href="curriculum.html">Math</a></li>
+                        <li><a href="curriculum.html">English</a></li>
+                    </ul>
+            </div>            
             <a class="active" href="index.html">Home</a>
             <a href="index.html" class="logo"></a>
         </div>
@@ -198,6 +232,17 @@ $(window).on("load", function() {
     $(".a-quote").css("opacity","0")
     /////////////////////////////////////////////////////////////////
     $(".active").css("color","rgb(140, 180, 255)")
+
+    $(".drop-content").hide()
+    $(".drop-menu").on("mouseenter", function(){
+        $(this).children(".drop-content").slideDown(100)
+    })
+    $(".drop-menu").on("mouseleave", function(){
+        $(".drop-content").slideUp(100)
+    })
+    
+    console.log($("#curriculum").outerWidth(false))
+
     var pos = $(document).scrollTop();
 
     if(pos>=560){ // on page refresh

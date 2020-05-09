@@ -124,6 +124,10 @@ body{
 
 }
 
+.select:hover{
+    background-color: rgb(161, 161, 161) !important;
+}
+
 .c-title{
     color: rgb(37, 37, 37);
     font-size: 7vh;

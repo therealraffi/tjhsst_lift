@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700|Nunito|PT+Sans:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Economica&display=swap" rel="stylesheet">
         <script src="JS/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="CSS/curriculum.css">
     </head>
@@ -30,9 +31,9 @@
                 <p class="close" align="left">x</p>
                 <p class="d-title" align="center">Title</p>
                 <div class="slides" align="center">
-                    <i class="left"></i>
+                    <span class="i left"><</span>
                     <img id ="s-img" src="Pics/robot-person.jpg">
-                    <i class="right"></i>
+                    <span class="i right">></span>
                 </div>
                 <table class="dates">
                     <tr>
@@ -200,7 +201,7 @@ $(window).on("load", function() {
     })
 
 
-    $("i").on("click",function(){
+    $(".i").on("click",function(){
         var image = $(this).parent().children("#s-img").attr("src").replace("(", "").replace(")", "")
 
         var list = $(".t-block").children()
