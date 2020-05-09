@@ -14,11 +14,46 @@
     </head>
     <body>
         <div class="navigation">
-            <a href="about.html">About</a>
-            <a href="signup.html">Sign Up</a>
-            <a class="active" href="resource.html">Resources</a>
-            <a href="curriculum.html">Curriculum</a>
-            <a href="index.html">Home</a>
+            <div class="drop-menu" align="center" id="ABOUT">
+                    <div class="drop-btn">
+                        <a href="about.html">About</a>
+                    </div>
+                    <ul class="drop-content">
+                        <li><a href="about.html">Mission</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#contact">Contact</a></li>
+                    </ul>
+            </div>   
+            <div class="drop-menu" align="center" id="SIGNUP">
+                <div class="drop-btn">
+                    <a href="signup.html">Signup</a>
+                </div>
+                <ul class="drop-content">
+                    <li><a href="signup.html">Mentor</a></li>
+                    <li><a href="signup.html">Mentee</a></li>
+                </ul>
+            </div>
+            <div class="drop-menu" align="center" id="RESROURCES">
+                <div class="drop-btn">
+                    <a href="resource.html">Resources</a>
+                </div>
+                <ul class="drop-content">
+                    <li><a href="resource.html#materials">Materials</a></li>
+                    <li><a href="resource.html#forms">Forms</a></li>
+                    <li><a href="resource.html">Calendar</a></li>
+                </ul>
+            </div>
+            <div class="drop-menu" align="center" id="CURRICULUM">
+                    <div class="drop-btn">
+                        <a href="curriculum.html">Curriculum</a>
+                    </div>
+                    <ul class="drop-content">
+                        <li><a href="curriculum.html#stem">STEM</a></li>
+                        <li><a href="curriculum.html#math">Math</a></li>
+                        <li><a href="curriculum.html#english">English</a></li>
+                    </ul>
+            </div>            
+            <a class="active" href="index.html">Home</a>
             <a href="index.html" class="logo"></a>
         </div>
        <div class="banner">
@@ -35,7 +70,7 @@
                     Calendar
                 </div>
             </div>
-            <div class="current" align="center">
+            <div class="current" id="materials" align="center">
                 <p class="c-title"  align="center">Materials</p>
                 <div class="sheet" align="center">
                     <p class="s-title">Math Worksheet #1</p>
@@ -115,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="mline">
+            <hr class="mline" id="forms">
             <div class="current" align="center">
                 <p class="c-title"  align="center" style="margin: 5vh 0  4vh  0">Forms</p>
                 <div class="sheet" align="center">
@@ -262,6 +297,14 @@ $(window).on("load", function() {
     $(".all-months").hide()
     $(".drop-info").hide()
     $(".calendar").hide()
+
+    $(".drop-content").hide()
+    $(".drop-menu").on("mouseenter", function(){
+        $(this).children(".drop-content").slideDown(100)
+    })
+    $(".drop-menu").on("mouseleave", function(){
+        $(".drop-content").slideUp(100)
+    })
 
     var pos = $(document).scrollTop();
     if(pos>=240){ // on page refresh

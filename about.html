@@ -14,11 +14,46 @@
     </head>
     <body>
         <div class="navigation">
-            <a class="active" href="about.html">About</a>
-            <a href="signup.html">Sign Up</a>
-            <a href="resource.html">Resources</a>
-            <a href="curriculum.html">Curriculum</a>
-            <a href="index.html">Home</a>
+            <div class="drop-menu" align="center" id="ABOUT">
+                    <div class="drop-btn">
+                        <a href="about.html">About</a>
+                    </div>
+                    <ul class="drop-content">
+                        <li><a href="about.html">Mission</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#contact">Contact</a></li>
+                    </ul>
+            </div>   
+            <div class="drop-menu" align="center" id="SIGNUP">
+                <div class="drop-btn">
+                    <a href="signup.html">Signup</a>
+                </div>
+                <ul class="drop-content">
+                    <li><a href="signup.html">Mentor</a></li>
+                    <li><a href="signup.html">Mentee</a></li>
+                </ul>
+            </div>
+            <div class="drop-menu" align="center" id="RESROURCES">
+                <div class="drop-btn">
+                    <a href="resource.html">Resources</a>
+                </div>
+                <ul class="drop-content">
+                    <li><a href="resource.html#materials">Materials</a></li>
+                    <li><a href="resource.html#forms">Forms</a></li>
+                    <li><a href="resource.html">Calendar</a></li>
+                </ul>
+            </div>
+            <div class="drop-menu" align="center" id="CURRICULUM">
+                    <div class="drop-btn">
+                        <a href="curriculum.html">Curriculum</a>
+                    </div>
+                    <ul class="drop-content">
+                        <li><a href="curriculum.html#stem">STEM</a></li>
+                        <li><a href="curriculum.html#math">Math</a></li>
+                        <li><a href="curriculum.html#english">English</a></li>
+                    </ul>
+            </div>            
+            <a class="active" href="index.html">Home</a>
             <a href="index.html" class="logo"></a>
         </div>
         <div class="banner">
@@ -27,7 +62,7 @@
             </div>
         </div>
         <div class="main" align="center">
-            <div class="i-block">
+            <div class="i-block" id="mission">
                     <!-- <hr class="i-line"> -->
                 <div class="exp" align="left">
                     <!-- <p class="i-title">Eu consequat ac felis</p> -->
@@ -45,7 +80,7 @@
             <p class="quote">
                     " <i>Mi bibendum neque egestas congue quisque. Adipiscing diam donec adipiscing tristique risus nec feugiat in.</i> "
             </p>
-            <div class="people">
+            <div class="people" id="team">
                 <p class="p-title">Meet Our Team</p>
                 <div class="member">
                     <div class="pic">
@@ -126,7 +161,7 @@
                 </div>
 
             </div>
-            <div class="contact" align="left">
+            <div class="contact" align="left" id="contact">
                 <p class="c-title" align="center">Contact Us</p>
                 <p class="c-desc">Reach out to us at <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWxkpQBWnjlRDkhGBDsXmlsZMwmlvbBdwFjlvSPMmkSnlTTrmbKHgnNLhBQdPHFbwqffg" target="_blank" class="clink">tjlift@gmail.com</a> or fill out this form:</p>
             
@@ -160,6 +195,14 @@
         $(window).on("load", function() {
             $(".active").css("color","rgb(140, 180, 255)")
             $(".drop-info").hide()
+
+            $(".drop-content").hide()
+            $(".drop-menu").on("mouseenter", function(){
+                $(this).children(".drop-content").slideDown(100)
+            })
+            $(".drop-menu").on("mouseleave", function(){
+                $(".drop-content").slideUp(100)
+            })
         
             $(window).scroll(function(){
             var pos = $(document).scrollTop();
