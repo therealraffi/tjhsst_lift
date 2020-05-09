@@ -411,8 +411,7 @@ body{
 .i-img{
     position:relative;
     max-height: 100%;
-    width:100%;
-
+    width:90%;
     transition: all .2s ease;
     border-radius: 2vh;
     box-shadow: 10px 10px rgba(78, 0, 0, 0.356);
@@ -518,11 +517,12 @@ body{
     background-color: rgb(255, 255, 255);
     transition:ease 0.2s;
     background-image: 
-    linear-gradient(to right, transparent 35%, white),
     linear-gradient(to top, transparent 55%, white),
+    linear-gradient(to right, transparent 50%, white),
     url("../Pics/rm-side.jpg");
-    background-size: 50%;
-    background-repeat: no-repeat;
+    background-size: 45%;
+    background-repeat: repeat-y;
+    border: none;
 }
 
 .a-title{
