@@ -424,12 +424,12 @@ select{
     background-color: rgb(37, 112, 224);
     overflow: hidden;
     bottom:0;
-    padding:6vh  0  2vh 0;
+    padding:2vh  0  2vh 0;
 }
 
 .bp{
-    margin:2vh 0;
-    font-size:2vh;
+    margin:2vh;
+    font-size:1.8vh;
     color:rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
 }
