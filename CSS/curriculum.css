@@ -18,93 +18,35 @@ body{
     position:fixed;
     top:0;
     width:100%;
-    height: 7vh;
+    height: 8vh;
     padding-right: 8vh;
     z-index: 3;
     transition: 0.3s;
 }
 
-.nfade-in{
-    background-color: "white";
-}
-
-.drop-menu{
-    float: right;
-}
-
-.drop-btn{
-    display: inline-block;
-    padding: 1.95vh 3vh !important;
-    margin: 0;
-}
-
-.drop-btn a{
-    float: none !important;
-    padding: 0 !important;
-}
-
-.drop-content{
-    display: none;
-    overflow: hidden;
-    background-color: white;
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    border-bottom-left-radius: 1.5vh;
-    border-bottom-right-radius: 1.5vh;
-}
-
-.drop-content li{
-    color: black;
-    padding: 1vh 0;
-}
-
-#ABOUT{
-    margin-right: 1% !important;
-}
-
-.drop-content a{
-    float: none !important;
-    padding: 0 !important;
-}
-
-.drop-menu li:hover{
-    background-color: rgb(140, 180, 255) !important;
-}
-.drop-menu li:hover a{
-    color: white !important ;
-}
-
 .navigation a {
     float: right;
-    padding: 2vh 3vh;
+    padding: 2.5vh 3vh;
     text-decoration: none;
     color:rgb(255, 255, 255);
-    font-size: 2vh;
+    font-size: 2.2vh;
     font-family: 'Poppins', sans-serif;
 }
 
-.navigation:hover {
-    background-color:white !important;
-}
-
-.navigation:hover a{
-    color:black !important;
+.current{
+    color: rgb(164, 219, 255) !important;
 }
 
 .navigation a:hover{
-    color: rgb(140, 180, 255) !important;
-}
-.navigation:hover .logo{
-    filter: invert(100%) !important;
+    color: rgb(164, 219, 255) !important;
 }
 
 .logo:hover{
-    background-color: rgb(32, 18, 0) !important;
+    background-image: url("../Pics/lift-logo-blue.png")
 }
 
 .logo{
-    background-image: url("../Pics/tjlogo2-light.png");
+    background-image: url("../Pics/lift-logo-white.png");
     background-size: cover;
     background-position: center;
     width: 10%;
@@ -113,7 +55,7 @@ body{
     cursor: pointer;
     position: absolute;
     left: 4vh;
-    transition: all ease 0.1s;
+    transition: all ease 0.2s;
 }
 
 

@@ -16,54 +16,31 @@
     </head>
     <body>
         <div class="navigation">
-            <div class="drop-menu" align="center" id="ABOUT">
-                    <div class="drop-btn">
-                        <a href="about.html">About</a>
-                    </div>
-                    <ul class="drop-content">
-                        <li><a href="about.html">Mission</a></li>
-                        <li><a href="about.html#team">Our Team</a></li>
-                        <li><a href="about.html#contact">Contact</a></li>
-                    </ul>
-            </div>   
-            <div class="drop-menu" align="center" id="SIGNUP">
-                <div class="drop-btn">
-                    <a href="signup.html">Signup</a>
-                </div>
-                <ul class="drop-content">
-                    <li><a href="signup.html">Mentor</a></li>
-                    <li><a href="signup.html">Mentee</a></li>
-                </ul>
-            </div>
-            <div class="drop-menu" align="center" id="RESROURCES">
-                <div class="drop-btn">
-                    <a href="resource.html">Resources</a>
-                </div>
-                <ul class="drop-content">
-                    <li><a href="resource.html#materials">Materials</a></li>
-                    <li><a href="resource.html#forms">Forms</a></li>
-                    <li><a href="resource.html">Calendar</a></li>
-                </ul>
-            </div>
-            <div class="drop-menu" align="center" id="CURRICULUM">
-                    <div class="drop-btn">
-                        <a href="curriculum.html">Curriculum</a>
-                    </div>
-                    <ul class="drop-content">
-                        <li><a href="curriculum.html#stem">STEM</a></li>
-                        <li><a href="curriculum.html#math">Math</a></li>
-                        <li><a href="curriculum.html#english">English</a></li>
-                    </ul>
-            </div>            
-            <a class="active" href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="resource.html">Resources</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a class="current" href="index.html">Home</a>
             <a href="index.html" class="logo"></a>
         </div>
         <div class="banner">
             <div class="title">
-                <p id="title-p">TJHSST LIFT</br> Mentorship</p>
-                <div class="dot" id="dot0"></div>
+                TJHSST LIFT</br> Mentorship
             </div>
-            <div class="ba" id="front"></div>
+            <!-- var iar=["tjfront.jpg","robot-person.jpg","lift.jpg","arduino.jpg","testing.jpg"] -->
+            <div id="slides" data-component="slideshow">
+                <div role="list">
+                    <div class="slide">
+                        <img src="Pics/lift.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="Pics/robot-person.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="Pics/tjfront.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="main">
             <div class="intro" align="center">
@@ -86,7 +63,7 @@
                 <hr class="mline">
             </div>
             <div class="services" align="center">
-                <p id="s-title">We Teach...</p>
+                <p id="s-title">Learn About...</p>
                 <a href="curriculum.html#english">
                     <div class="s-block" align="center">
                         <img src="Pics/reading.png">
@@ -141,30 +118,20 @@
                         <img class="i-img" src="Pics/talkingteacher.jpg">
                     </div>
                     <div class="exp" align="left">
-                        <!-- <p class="i-title">Eu consequat ac felis</p> -->
-                        <p class="i-para">
-                            <span class="i-title">Placerat in</span> aliquam sem et tortor consequat id porta nibh venenatis cras. 
-                            Vul putate enim nulla aliquet porttitor. Placerat in egestas erat imperdiet. 
-                            Ipsum dolor sit amet consectetur adipiscing. Vulputate dignissim suspendisse in est ante. 
-                            Mi bibendum neque egestas congue quisque. Adipiscing diam donec adipiscing tristique risus nec feugiat in. 
-                            Auctor augue mauris augue neque. Sed risus pretium quam vulputate. Amet nisl purus in mollis nunc sed id semper risus. 
-                            Dictum non consectetur.r adipiscing. Vulputate dignissim suspendisse in est ante. Mi bibendum neque egestas.
-                        </p>
+                    <!-- <p class="i-title">Eu consequat ac felis</p> -->
+                        <span class="i-title">Placerat in</span> aliquam sem et tortor consequat id porta nibh venenatis cras. 
+                        Vul putate enim nulla aliquet porttitor. Placerat in egestas erat imperdiet. 
+                        Ipsum dolor sit amet consectetur adipiscing. Vulputate dignissim suspendisse in est ante. 
                     </div>
                 </div>
                 <div class="i-block">
                     <!-- <hr class="i-line"> -->
                     <div class="exp" align="left">
                         <!-- <p class="i-title">Eu consequat ac felis</p> -->
-                        <p class="i-para">
                             <span class="i-title">Aliquam consequat</span> nibh venenatis cras. 
                             Vulput ate enim nulla aliquet porttitor. Placerat in egestas erat imperdiet. 
                             Ipsum dolor sit amet consectetur adipiscing. Vulputate dignissim suspendisse in est ante. 
-                            Mi bibendum neque egestas congue quisque. Adipiscing diam donec adipiscing tristique risus nec feugiat in. 
-                            Auctor augue mauris augue neque. Sed risus pretium quam vulputate. Amet nisl purus in mollis nunc sed id semper risus. 
-                            Dictum non consectetu.r adipiscing. Vulputate dignissim suspendisse in est ante. Adipiscing diam donec adipiscing tristique risus nec feugiat in.
-                            Mi bibendum neque egestas it amet consectetur adipiscing. Vulputate dignissim suspendisse in est ante. 
-                        </p>
+                            Mi bibendum neque egestas congue quisque.
                     </div>
                     <div class="display" align="center">
                         <img class="i-img" src="Pics/gotoschool.webp">
@@ -175,29 +142,21 @@
                         <img class="i-img" src="Pics/teensread.jpg">
                     </div>
                     <div class="exp" align="left">
-                        <!-- <p class="i-title">Eu consequat ac felis</p> -->
-                        <p class="i-para">
-                            <span class="i-title">Placerat in</span> aliquam sem et tortor consequat id porta nibh venenatis cras. 
-                            Vul putate enim nulla aliquet porttitor. Placerat in egestas erat imperdiet. 
-                            Ipsum dolor sit amet consectetur adipiscing. Vulputate dignissim suspendisse in est ante. 
-                            Mi bibendum neque egestas congue quisque. Adipiscing diam donec adipiscing tristique risus nec feugiat in. 
-                            Auctor augue mauris augue neque. Sed risus pretium quam vulputate. Amet nisl purus in mollis nunc sed id semper risus. 
-                            Dictum non consectetur.r adipiscing. Vulputate dignissim suspendisse in est ante. Mi bibendum neque egestas.
-                        </p>
+                    <!-- <p class="i-title">Eu consequat ac felis</p> -->
+                        <span class="i-title">Placerat in</span> aliquam sem et tortor consequat id porta nibh venenatis cras. 
+                        Vul putate enim nulla aliquet porttitor. Placerat in egestas erat imperdiet. 
+                        Ipsum dolor sit amet consectetur adipiscing. Vulputate dignissim suspendisse in est ante. 
                     </div>
                 </div>
             </div>
             <div class="signup" align="center">
-                <div class="si-block">
+                <div class="si-block"  align="center" style="background-image: url('../Pics/tutor2.jpg')">
                     <p class="si-intro">Start learning today. <br>Become a <span id="big">Mentee</span></p>
                     <a href="signup.html"><p class="si-signup">Sign up</p></a>
-                    <div class="s-img" style="background-image:url('Pics/scientist.jpg')"></div>
-
                 </div>
-                <div class="si-block"  align="center">
+                <div class="si-block"  align="center" style="background-image: url('../Pics/scientist.jpg')">
                     <p class="si-intro">Get mentoring experience. <br>Become a <span id="big">Mentor</span></p>
                     <a href="signup.html"><p class="si-signup">Apply</p></a>
-                    <div class="s-img" style="background-image:url('Pics/tutor2.jpg')"></div>
                 </div>
             </div>
             <div class="about" align="right">
@@ -205,16 +164,12 @@
                 <p class="a-para">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit  laboris nisi ut aliquip ex ea commodo cons. 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit  laboris nisi 
+                    ut aliquip ex ea commodo cons. aliqua. Ut enim ad minim veniam, quis nostrud
                 </p>
                 <a href="about.html">
                     <p class="a-signup">Learn more →</p>
                 </a>
-                <p class="a-quote">
-                    "<i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et. Adipiscing elit, sed do eiusmod tempor.
-                    </i>"
-                </p>
             </div>
             <div class="bottom" align="center">
                 <p class="bp">info@tjhsstliftmentor.org</p>
@@ -232,20 +187,7 @@
 
 $(window).on("load", function() {
     ///////////////////////////////////////////////////////
-    $(".a-quote").css("opacity","0")
-    /////////////////////////////////////////////////////////////////
-    $(".active").css("color","rgb(140, 180, 255)")
-
-    $(".drop-content").hide()
-    $(".drop-menu").on("mouseenter", function(){
-        $(this).children(".drop-content").slideDown(100)
-    })
-    $(".drop-menu").on("mouseleave", function(){
-        $(".drop-content").slideUp(100)
-    })
-    
-    console.log($("#curriculum").outerWidth(false))
-
+    /////////////////////////////////////////////////////////////////    
     var pos = $(document).scrollTop();
 
     if(pos>=560){ // on page refresh
@@ -271,13 +213,6 @@ $(window).on("load", function() {
         }
 
        ////////////////////////////////////////////////////////////////////////////////////////
-        var objectBottom = $(".a-quote").offset().top + $(".a-quote").outerHeight();
-        /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-            if ($(".a-quote").css("opacity")==0) {
-                $(".a-quote").fadeTo(500,1);
-            }
-        } 
         ////////////////////////////////////////////////////////////////////////////////////////
         
     }).scroll();
@@ -308,63 +243,83 @@ $(window).on("load", function() {
     var iar=["tjfront.jpg","robot-person.jpg","lift.jpg","arduino.jpg","testing.jpg"]
     var num =1;
 
-    for(i=1;i<iar.length;i++) //making slideshow dots
-    {
-        $(".title").append(
-            '<div class="dot" id="dot'+ i +'"></div>'
-        );
-    }
+    // $( ".dot" ).click(function() {
+    //     var nid = $(this).attr("id");
+    //     nid = parseInt(nid.replace("dot",""))
+    //     var im = "Pics/"+iar[nid];
+    //     setTimeout(function(){
+    //         $(".dot").css("background-color","    rgb(202, 202, 202)")
+    //         $("#dot"+nid).css("background-color","rgb(107, 107, 107)")
+    //         $(".ba").css("background-image","url('"+im + "')")
+    //         $(".ba").fadeIn(300);
+    //         num=nid+1;
+    //     },600)
+    //     $(".ba").fadeOut(300);
+    // });
 
-    $("#dot0").css("background-color", "rgb(107, 107, 107)");
 
-    $( ".dot" ).click(function() {
-        var nid = $(this).attr("id");
-        nid = parseInt(nid.replace("dot",""))
-        var im = "Pics/"+iar[nid];
-        setTimeout(function(){
-            $(".dot").css("background-color","    rgb(202, 202, 202)")
-            $("#dot"+nid).css("background-color","rgb(107, 107, 107)")
-            $(".ba").css("background-image","url('"+im + "')")
-            $(".ba").fadeIn(600);
-            num=nid+1;
-        },600)
-        $(".ba").fadeOut(600);
-    });
+   var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+   console.log(slideshows)
+  
+  // Apply to all slideshows that you define with the markup wrote
+  slideshows.forEach(initSlideShow);
 
-    setInterval(function(){ //changing slides on slie show
+  function initSlideShow(slideshow) {
 
-        if ($('.dot:hover').length == 0) { //check  if mouse is over pic
+    var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`); // Get an array of slides
+
+    var index = 0, time = 6000;
+    slides[index].classList.add('active');  
+    
+    setInterval( () => {
+      slides[index].classList.remove('active');
+      
+      //Go over each slide incrementing the index
+      index++;
+      
+      // If you go over all slides, restart the index to show the first slide and start again
+      if (index === slides.length) index = 0; 
+      
+      slides[index].classList.add('active');
+      console.log(index)
+
+    }, time);
+  }
+
+    // setInterval(function(){ //changing slides on slie show
+
+    //     if ($('.dot:hover').length == 0) { //check  if mouse is over pic
         
-            if(num>=iar.length){
-                num=0;
-            }
-            var im = "Pics/"+iar[num];
+    //         if(num>=iar.length){
+    //             num=0;
+    //         }
+    //         var im = "Pics/"+iar[num];
 
-            setTimeout(function(){
-                $(".dot").css("background-color","    rgb(202, 202, 202)")
-                $("#dot"+num).css("background-color","rgb(107, 107, 107)")
-                $(".ba").css("background-image","url('"+im + "')")
-                $(".ba").css("filter","brightness(60%)")
-                $(".ba").fadeIn(800);
-                num++;
-            },800)
-            $(".ba").fadeOut(800);
-        }
+    //         setTimeout(function(){
+    //             $(".dot").css("background-color","    rgb(202, 202, 202)")
+    //             $("#dot"+num).css("background-color","rgb(107, 107, 107)")
+    //             $(".ba").css("background-image","url('"+im + "')")
+    //             $(".ba").css("filter","brightness(60%)")
+    //             $(".ba").fadeIn(800);
+    //             num++;
+    //         },800)
+    //         $(".ba").fadeOut(800);
+    //     }
 
-        setTimeout(function(){
-            $(".q-desc").text('"' + quote[qplace]+ '"')
-            $(".q-from").text(from[qplace])
-            $(".quote").css("background-color", colors[qplace])
-            $(".q-desc").fadeIn()
-            $(".q-from").fadeIn()
-        },400)
-        $(".q-from").fadeOut()
-        $(".q-desc").fadeOut()
+    //     setTimeout(function(){
+    //         $(".q-desc").text('"' + quote[qplace]+ '"')
+    //         $(".q-from").text(from[qplace])
+    //         $(".quote").css("background-color", colors[qplace])
+    //         $(".q-desc").fadeIn()
+    //         $(".q-from").fadeIn()
+    //     },400)
+    //     $(".q-from").fadeOut()
+    //     $(".q-desc").fadeOut()
 
-        qplace++
-        if(qplace>=quote.length)
-            qplace = 0
+    //     qplace++
+    //     if(qplace>=quote.length)
+    //         qplace = 0
         
-    }, 6000);
+    // }, 6000);
 })
 </script>
