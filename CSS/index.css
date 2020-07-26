@@ -5,218 +5,223 @@
 rgb(0, 40, 83)
 */
 .header {
-  background-image:  linear-gradient(to right, rgba(224, 103, 248, 0.658), rgba(73, 59, 201, 0.801)),
-  url('../Pics/banner-image.jpg');
+  background-image: linear-gradient(to right, rgba(224, 103, 248, 0.658), rgba(73, 59, 201, 0.801)),
+    url('../Pics/banner-image.jpg');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   display: block;
   position: relative;
   height: 75vh;
-  }
+}
 
 
-  .header h3{
-    color:rgba(255, 255, 255, 0.651);
-  }
+.header h3 {
+  color: rgba(255, 255, 255, 0.651);
+}
 
-  .section-1{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.445)),
-    url("../Pics/pink-background.png");
-    background-size: cover;
-  }
-  .straight-line {
-    border: 1px solid rgb(170, 84, 209);
-    width: 30%;
-    text-align: left;
-  }
-  .description {
-    position: relative;
-    top: 20vh;
-    left: 10%;;
-    text-align: left;
-  }
-  .description h1 {
-    color: #f4f7ed;
-  }
-  .description h4 {
-    color: #fff;
-    font-weight: bolder;
-    margin-top: 2.5vh;
-    line-height: 1.5;
-  }
-  .banner-btn {
-    border: 2px white solid;
-    background:rgba(255, 255, 255, 0);
-    border-radius: 1vh;
-    color:rgb(255, 255, 255);
-    margin: 3vh 2vh 0 0;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 2.5vh;
-    display: inline-block;
-  }
-  .banner-btn:hover {
-    color: rgba(7, 190, 7, 0.623);
-    background:white;
-    border: 2px solid transparent;
-    text-decoration: none;
-  }
+.section-1 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.445)),
+    url("../Pics/pink-background.jpeg");
+  background-size: cover;
+}
+
+.straight-line {
+  border: 1px solid rgb(198, 184, 250);
+  width: 30%;
+  text-align: left;
+}
+
+.description {
+  position: relative;
+  top: 20vh;
+  left: 10%;
+  ;
+  text-align: left;
+}
+
+.description h1 {
+  color: #f4f7ed;
+}
+
+.description h4 {
+  color: #fff;
+  font-weight: bolder;
+  margin-top: 2.5vh;
+  line-height: 1.5;
+}
+
+.banner-btn {
+  border: 2px white solid;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 1vh;
+  color: rgb(255, 255, 255);
+  margin: 3vh 2vh 0 0;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 2.5vh;
+  display: inline-block;
+}
+
+.banner-btn:hover {
+  color: rgba(7, 190, 7, 0.623);
+  background: white;
+  border: 2px solid transparent;
+  text-decoration: none;
+}
 
 
-  .right-img{
-    max-width: 100%;
-    border-radius: 3vh;
-    vertical-align: center;
-    margin: 5vw 0;
-    box-shadow: 0 1vh 1vh rgba(0,0,0,0.3);
-  }
-  
+.right-img {
+  max-width: 100%;
+  border-radius: 3vh;
+  vertical-align: center;
+  margin: 5vw 0;
+  box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
+}
 
-  .testimonial{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 2vh;
-    color:rgb(119, 119, 119);
-    display: inline-block;
-    margin: 2vh;
-    width: 78%;
-  }
 
-  .intro h4{
-    margin: 3vh 0;
-    color:rgb(0, 95, 197);
+.testimonial {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 2vh;
+  color: rgb(119, 119, 119);
+  display: inline-block;
+  margin: 2vh;
+  width: 78%;
+}
 
-  }
+.intro h4 {
+  margin: 3vh 0;
+  color: rgb(0, 95, 197);
 
-  .quote
-  {
-    border: solid 1px rgb(194, 183, 183);
-    padding: 1vh;
-    border-radius: 3vh;
+}
 
-    vertical-align: top;
-    margin:4vh 0vh !important;
-    display: inline-block;
-  }
+.quote {
+  border: solid 1px rgb(194, 183, 183);
+  padding: 1vh;
+  border-radius: 3vh;
 
-  .left-line{
-    border-left: 1px solid rgb(194, 183, 183);
-  }
+  vertical-align: top;
+  margin: 4vh 0vh !important;
+  display: inline-block;
+}
 
-  .feature-img{
-    width: 20%;
-  }
+.left-line {
+  border-left: 1px solid rgb(194, 183, 183);
+}
 
-  .box{
-    background-color: rgba(122, 195, 255, 0.116);
-    border:1px solid white;
-    margin-top: 5vh;
-    padding: 3vh;
-    width: 90%;
-    color: white;
-    height: 100%;
-  }
-  .box p{
-    color: white;
-  }
+.feature-img {
+  width: 20%;
+}
 
-  .solid-block{
-    padding: 5vh;
-    background-image: linear-gradient(to bottom, #7b4bffc4, rgba(190, 76, 165, 0.507)),
+.box {
+  background-color: rgba(122, 195, 255, 0.116);
+  border: 1px solid white;
+  margin-top: 5vh;
+  padding: 3vh;
+  width: 90%;
+  color: white;
+  height: 100%;
+}
+
+.box p {
+  color: white;
+}
+
+.solid-block {
+  padding: 5vh;
+  background-image: linear-gradient(to bottom, #7b4bffc4, rgba(190, 76, 165, 0.507)),
     url("../Pics/robot-person.jpg");
-    background-size: cover;
-  }
+  background-size: cover;
+}
 
-  .solid-block h2{
-    color:white !important;
-  }
+.solid-block h2 {
+  color: white !important;
+}
 
-  .solid-block h4{
-    color:rgb(255, 193, 222);
-    margin: 2vh 0;
-  }
+.solid-block h4 {
+  color: rgb(255, 193, 222);
+  margin: 2vh 0;
+}
 
 
-  .news-post{
-    background-color: white;
-    margin: 2vh 0;
-    border-radius: 4vh;
-    box-shadow: 0 1vh 5vh rgba(0,0,0,0.3);
-    overflow: hidden;
-  }
+.news-post {
+  background-color: white;
+  margin: 2vh 0;
+  border-radius: 4vh;
+  box-shadow: 0 1vh 5vh rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
 
-  .news-post img{
-    max-width: 100%;
-  }
+.news-post img {
+  max-width: 100%;
+}
 
-  .news-post h3{
-    padding: 0 5vh;
-  }
-  
-  .news-post p{
-    padding: 0 5vh 5vh 5vh;
-  }
+.news-post h3 {
+  padding: 0 5vh;
+}
 
-  .left-image{
-    height: 100%;
-    background-image: radial-gradient(transparent 60%, whitesmoke),
+.news-post p {
+  padding: 0 5vh 5vh 5vh;
+}
+
+.left-image {
+  height: 100%;
+  background-image: radial-gradient(transparent 60%, rgb(250, 250, 250)),
     url("../Pics/class-clipart.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-  }
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+}
 
-  .signup{
-    vertical-align: top;
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    transition: 0.5s ease-in-out;
-    overflow: hidden;
-    z-index: 0;
-  }
+.signup {
+  vertical-align: top;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 0;
+}
 
-  .signup:hover{
-    box-shadow: 1vh 2vh 2vh rgba(0,0,0,0.3);
-    transform: scale(1.05);
-    transition: all 0.2s ease-in 0.05 ease-out;
-    z-index: 1;
-    cursor: pointer;
-  }
+.signup:hover {
+  box-shadow: 1vh 2vh 2vh rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: all 0.2s ease-in 0.05 ease-out;
+  z-index: 1;
+  cursor: pointer;
+}
 
-  .signup h2{
-    text-decoration: none;
-    color:rgb(255, 255, 255) !important;
-  }
+.signup h2 {
+  text-decoration: none;
+  color: rgb(255, 255, 255) !important;
+}
 
-  .signup h4{
-    text-decoration: none;
-    color:rgba(255, 255, 255, 0.562) !important;
-    margin-bottom: 5vh;
+.signup h4 {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.562) !important;
+  margin-bottom: 5vh;
 
-  }
+}
 
-  .triangle {
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-    border-left: 49.5vw solid transparent;
-    border-right: 49.5vw solid transparent;
-    border-top: 10vh solid whitesmoke;
-    position: absolute;
-    z-index: 2;
-  }
+.triangle {
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-left: 49.5vw solid transparent;
+  border-right: 49.5vw solid transparent;
+  border-top: 10vh solid rgb(250, 250, 250);
+  position: absolute;
+  z-index: 2;
+}
 
-  .student{
-    background-image: linear-gradient(rgba(90, 174, 253, 0.8), rgba(35, 57, 153, 0.8)),
+.student {
+  background-image: linear-gradient(rgba(90, 174, 253, 0.8), rgba(35, 57, 153, 0.8)),
     url("../Pics/working.jpeg");
-  }
+}
 
-  .mentor{
-    background-image: linear-gradient(rgba(223, 130, 181, 0.8),rgba(124, 24, 66, 0.8)),
+.mentor {
+  background-image: linear-gradient(rgba(223, 130, 181, 0.8), rgba(124, 24, 66, 0.8)),
     url("../Pics/tutor2.jpg");
-  }
-
-
+}
