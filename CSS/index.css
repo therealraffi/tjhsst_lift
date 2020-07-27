@@ -5,16 +5,40 @@
 rgb(0, 40, 83)
 */
 .header {
-  background-image: linear-gradient(to right, rgba(224, 103, 248, 0.658), rgba(73, 59, 201, 0.801)),
-    url('../Pics/banner-image.jpg');
+  background-image: linear-gradient(to right, rgba(224, 103, 248, 0.658), rgba(73, 59, 201, 0.801));
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
   display: block;
   position: relative;
   height: 75vh;
+  margin: 0;
 }
 
+#slideshow { 
+  margin: 0; 
+  padding: 0;
+  position: absolute; 
+  width: 100%; 
+  height: 100%;
+  z-index: -1;
+  display: grid;
+  left:0;
+  top:0;
+}
+
+#slideshow > div { 
+  position: relative; 
+  grid-column: 1;
+  margin: 0;
+  grid-row: 2;
+  width:100%; 
+  height: 100%;
+}
+
+#slideshow > div > img{
+  width:100%; 
+}
 
 .header h3 {
   color: rgba(255, 255, 255, 0.651);
@@ -121,8 +145,15 @@ rgb(0, 40, 83)
 }
 
 .solid-block h4 {
-  color: rgb(255, 193, 222);
+  color: rgba(255, 255, 255, 0.8);
   margin: 2vh 0;
+}
+
+.count{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 10vh;
+  color: white;
+  padding: 1vh;
 }
 
 
@@ -189,11 +220,13 @@ rgb(0, 40, 83)
   width: 0;
   height: 0;
   margin: 0 auto;
-  border-left: 49.5vw solid transparent;
-  border-right: 49.5vw solid transparent;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
   border-top: 10vh solid rgb(255, 255, 255);
   position: absolute;
   z-index: 2;
+  pointer-events: none;
+
 }
 
 .student {
@@ -205,3 +238,4 @@ rgb(0, 40, 83)
   background-image: linear-gradient(rgba(223, 130, 181, 0.8), rgba(124, 24, 66, 0.8)),
     url("../Pics/tutor2.jpg");
 }
+

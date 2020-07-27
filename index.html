@@ -11,7 +11,7 @@
     <title>TJHSST LIFT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@300;400&family=Permanent+Marker&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/main.css" />
@@ -54,7 +54,14 @@
         </div>
     </nav>
     <header class="header container-fluid">
-        <div class="overlay"></div>
+        <div id="slideshow">
+            <div>
+                <img src="Pics/lift.jpg">
+            </div>
+            <div>
+                <img src="Pics/banner-image.jpg">
+            </div>
+        </div>
         <div class="description col-lg-6 col-md-6 col-sm-12">
             <h1>TJHSST LIFT<br>Mentorship</h1>
             <hr class="straight-line" align="left">
@@ -118,7 +125,7 @@
             <div class='row'>
                 <div class="col-lg-6">
                     <div class="box">
-                        <h4>Reached 30+ Schools in Virginia</h4>
+                        <h4>Reached<br><span class="count">30</span><br> Schools in Virginia</h4>
                         <p>We have reached several schools across Virginia and welcome anymore
                             in our region! We accommodate all students who are willing to push
                             themselves to become better learners.
@@ -127,7 +134,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="box">
-                        <h4>Over 60 Dedicated Mentors and Teachers</h4>
+                        <h4>Over<br><span class="count">60</span><br>
+                            Mentors and Teachers</h4>
                         <p>We have reached several schools across Virginia and welcome anymore
                             in our region! We accommodate all students who are willing to push
                             themselves to become better learners.
@@ -232,7 +240,6 @@
         <div class="row" class="copyright">
         </div>
     </div>
-
     <script src="JS/jquery-3.2.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="JS/main.js"></script>
@@ -241,7 +248,28 @@
 </html>
 <script>
     $(document).ready(function () {
-        $('.header').height($(window).height() * .75);
+        $("#slideshow > div:gt(0)").hide();
+        
+        $('.count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 5000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+        setInterval(function () {
+            $('#slideshow > div:first-child')
+                .fadeOut(4000)
+                .next()
+                .fadeIn(4000)
+                .end()
+                .appendTo('#slideshow');
+        }, 8000);
     })
     //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

@@ -12,7 +12,7 @@
 .math-btn {
     border: 2px rgb(118, 74, 221) solid;
     color: rgb(118, 74, 221);
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .math-btn:hover {
@@ -26,7 +26,7 @@
 .eng-btn {
     border: 2px rgb(74, 138, 221) solid;
     color: rgb(74, 138, 221);
-    background: white;
+    background: rgba(255, 255, 255, 0.75);
     background-position: center;
 
 }
@@ -41,7 +41,7 @@
 .stem-btn {
     border: 2px rgb(221, 74, 123) solid;
     color: rgb(221, 74, 123);
-    background: rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .stem-btn:hover {
@@ -103,7 +103,7 @@
     display: inline-block;
     font-family: 'Raleway';
     font-size: 2.5vh;
-    width: 49.5%;
+    width: 49%;
     padding: 1vh;
     transition: 0.2 ease-in-out;
     vertical-align: middle;
