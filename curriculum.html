@@ -22,14 +22,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="curriculum.html">Curriculum</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                <li class="nav-item  dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Signup
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="signup-mentor.html">Mentor</a>
+                        <a class="dropdown-item" href="signup-mentee.html">Mentee</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -123,41 +133,41 @@
         </div>
     </div>
     <div class="container-fluid subject" id="stem-block" align="left">
-            <div class="tab" align="center">
-                <div class="tablink overview-tab">Overview</div>
-                <div class="tablink material-tab">Material</div>
+        <div class="tab" align="center">
+            <div class="tablink overview-tab">Overview</div>
+            <div class="tablink material-tab">Material</div>
+        </div>
+        <div class="row overview">
+            <div class="col-lg-6">
+                <h2>STEM</h2>
+                <hr align="left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
             </div>
-            <div class="row overview">
-                <div class="col-lg-6">
-                    <h2>STEM</h2>
-                    <hr align="left">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-                <div class="col-lg-6" align="center">
-                    <img src="Pics/stem.jpg">
-                </div>
+            <div class="col-lg-6" align="center">
+                <img src="Pics/stem.jpg">
             </div>
-            <div class="row material">
-                <div class="col-lg-12">
-                    <div class="document-block" align="center">
-                        <div class="document">
-                            <a href="Docs/tjpdf.pdf" target="_blank">
-                                <embed src="Docs/tjpdf.pdf#toolbar=0&navpanes=0&scrollbar=0" class="doc"
-                                    type="application/pdf" width="100%" height="600px" />
-                            </a>
-                        </div>
-                        <a href="Docs/tjpdf.pdf" target="_blank">Math Worsksheet</a>
+        </div>
+        <div class="row material">
+            <div class="col-lg-12">
+                <div class="document-block" align="center">
+                    <div class="document">
+                        <a href="Docs/tjpdf.pdf" target="_blank">
+                            <embed src="Docs/tjpdf.pdf#toolbar=0&navpanes=0&scrollbar=0" class="doc"
+                                type="application/pdf" width="100%" height="600px" />
+                        </a>
                     </div>
+                    <a href="Docs/tjpdf.pdf" target="_blank">Math Worsksheet</a>
                 </div>
             </div>
         </div>
-    
+    </div>
+
     <script src="JS/jquery-3.2.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="JS/main.js"></script>

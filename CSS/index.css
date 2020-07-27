@@ -111,7 +111,7 @@ rgb(0, 40, 83)
 
 .solid-block {
   padding: 5vh;
-  background-image: linear-gradient(to bottom, #7b4bffc4, rgba(190, 76, 165, 0.507)),
+  background-image: linear-gradient(to bottom, #f75afc88, rgb(190, 76, 110)),
     url("../Pics/robot-person.jpg");
   background-size: cover;
 }
@@ -148,7 +148,7 @@ rgb(0, 40, 83)
 
 .left-image {
   height: 100%;
-  background-image: radial-gradient(transparent 60%, rgb(250, 250, 250)),
+  background-image: radial-gradient(transparent 60%, rgb(255, 255, 255)),
     url("../Pics/class-clipart.jpeg");
   background-position: center;
   background-size: cover;
@@ -191,7 +191,7 @@ rgb(0, 40, 83)
   margin: 0 auto;
   border-left: 49.5vw solid transparent;
   border-right: 49.5vw solid transparent;
-  border-top: 10vh solid rgb(250, 250, 250);
+  border-top: 10vh solid rgb(255, 255, 255);
   position: absolute;
   z-index: 2;
 }

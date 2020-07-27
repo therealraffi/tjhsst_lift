@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TJHSST LIFT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/signup-mentee.css" />
+    <link rel="icon" type="image/x-icon" href="Pics/lift-icon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#"><img src="Pics/tjlogo2.png"></a>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="curriculum.html">Curriculum</a>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Signup
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="signup-mentor.html">Mentor</a>
+                        <a class="dropdown-item" href="signup-mentee.html">Mentee</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="section-1" align="center">
+        <div class="container-fluid form-block" align="left">
+            <h2 align="center">TJHSST Lift Mentorship <strong>Mentee</strong> Appication</h2>
+            <hr class='double-line'>
+            <form class="form"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSd98bTmhI4JZZS1qpZDhE5-iHt6RsZex9J25G3sk7Hx1_jLhA/formResponse"
+                target="curriculum.html" align="left">
+                <div class="form-box">
+                    <input name="entry.848780781" type="text" placeholder="Full Name" required />
+                </div>
+                <div class="form-box">
+                    <input name="entry.556909304" placeholder="Email Address" type="email" required />
+                </div>
+                <div class="form-box">
+                    <input name="entry.1421346081" placeholder="Parent/Guardian Email" type="email" required />
+                </div>
+                <div class="form-box">
+                    <input name="entry.2120085156" placeholder="State" type="text" required />
+                </div>
+                <div class="form-box">
+                    <label>What grade are you in?</label>
+                    <select name="entry.361182308" required>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="form-box">
+                    <input name="entry.1413452312" placeholder="School" type="text" required />
+                </div>
+                <div class="form-box">
+                    <textarea class="apply" name="entry.645873033"
+                        placeholder="Why do you want to apply to this program?" required></textarea>
+                </div>
+                <div class="form-box">
+                    <textarea class="extra" name="entry.1903951177"
+                        placeholder="Anything else we should know?"></textarea>
+                </div>
+                <input type="submit" value="Send" />
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/jquery-3.2.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/curriculum.js"></script>
+</body>
+
+</html>

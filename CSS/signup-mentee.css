@@ -1,0 +1,18 @@
+.section-1{
+    background-image: url("../Pics/new-background.png");
+    background-size: cover;
+    padding: 25vh 0 15vh 0;
+
+}
+
+.form-block {
+    padding:5vh;
+    border-radius: 6vh;
+    box-shadow: 0 2vh 2vh 1vh rgba(0, 0, 0, 0.5);
+    max-width: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+h2{
+    color:rgb(155,138,255) !important;
+}

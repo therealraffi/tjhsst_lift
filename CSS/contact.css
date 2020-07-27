@@ -1,0 +1,16 @@
+.section-1{
+    padding: 15vh;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.685), rgba(255, 255, 255, 0)),
+    url("../Pics/multi-background.png");
+    background-size: cover;
+}
+
+.section-1 img{
+    width: 6vh;
+    transition: 0.3s  ease;
+}
+
+.section-1 img:hover{
+    width: 6.5vh;
+}
