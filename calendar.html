@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>TJHSST LIFT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css" type="text/css"
+        rel="stylesheet" /> -->
+    <link rel="stylesheet" type="text/css" href="CSS/fullcalendar.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+    <link rel="icon" type="image/x-icon" href="Pics/lift-icon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#"><img src="Pics/tjlogo2.png"></a>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="curriculum.html">Curriculum</a>
+                </li>
+                <li class="nav-item  dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Signup
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="signup-mentor.html">Mentor</a>
+                        <a class="dropdown-item" href="signup-mentee.html">Mentee</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="calendar.html">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid calendar-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="bootstrapModalFullCalendar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fullCalModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span
+                            class="sr-only">close</span></button> -->
+                    <h4 id="modalTitle" class="modal-title" style="color:rgb(12, 0, 83)"></h4>
+                </div>
+                <div id="modalBody" class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!-- <a class="btn btn-primary" id="eventUrl" target="_blank">Event Page</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="JS/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //format
+            var m = moment('July 23 2020 9:32 PM').format('LLL')
+            console.log(m);
+            $('#bootstrapModalFullCalendar').fullCalendar({
+                header: {
+                    left: '',
+                    center: 'prev title next',
+                    right: ''
+                },
+                eventClick: function (event, jsEvent, view) {
+                    $('#modalTitle').html(event.title);
+                    $('#modalBody').html(event.description);
+                    $('#eventUrl').attr('href', event.url);
+                    $('#fullCalModal').modal();
+                    return false;
+                },
+                events: [{
+                    "title": "First Meeting",
+                    "allday": "false",
+                    "description": "<p>11:20: Nap time <br>12:00: Robot time<br>1:30: End</p>",
+                    "start": moment().subtract('days', 14),
+                    "end": moment().subtract('days', 14),
+                    "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
+                }, ]
+            });
+        });
+    </script>
+</body>
+
+</html>
