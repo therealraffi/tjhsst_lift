@@ -6,7 +6,7 @@
 
 .intro p {
     margin-top: 5vh;
-    max-width: 75%;
+    max-width: 70%;
 }
 
 .math-btn {
@@ -16,8 +16,7 @@
 }
 
 .math-btn:hover {
-    background: linear-gradient(to bottom, rgba(118, 74, 221, 0.75), rgba(118, 74, 221, 0.75)),
-        url("../Pics/math.jpg");
+    background: rgb(118, 74, 221);
     background-size: cover;
     background-position: center;
     color: white;
@@ -32,8 +31,7 @@
 }
 
 .eng-btn:hover {
-    background: linear-gradient(to bottom, rgba(74, 138, 221, 0.75), rgba(74, 138, 221, 0.75)),
-        url("../Pics/english.jpg");
+    background: rgb(74, 138, 221);
     background-size: cover;
     color: white;
 }
@@ -45,8 +43,7 @@
 }
 
 .stem-btn:hover {
-    background: linear-gradient(to bottom, rgb(221, 74, 123, .75), rgb(221, 74, 123, .75)),
-        url("../Pics/stem.jpg");
+    background: rgb(221, 74, 123);
     background-size: cover;
     background-position: center;
     color: white;
@@ -159,7 +156,7 @@
     border-radius: 3vh;
     overflow: hidden;
     transition: 0.2s ease;
-    filter: brightness(70%);
+    filter: brightness(90%);
     cursor: pointer;
     z-index: 1;
 }

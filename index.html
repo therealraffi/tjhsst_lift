@@ -50,6 +50,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -83,10 +86,11 @@
                         Lift, our mission is to inspire the next generation of innovators.
                     </p>
                     <img src="Pics/icons8-diploma-50.png" class="quote">
-                    <div class="testimonial">
+                    <div class="testimonial fade">
                         "TJHSST LIFT has changed the lives of hundres of aspiring thinkers. I say with pride that we,
                         as a community are making changed"
                         <h4>Jay Wickliff, Coordinator</h4>
+                        <a class="learn-more" href="about.html">Read More → </a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-12">
@@ -101,12 +105,12 @@
                     <hr class="double-line" data-symbol="o">
                 </div>
                 <div class="col-lg-4 col-sm-12">
-                    <img src="Pics/icons8-math-50.png" class="feature-img">
+                    <img src="Pics/icons8-math-96.png" class="feature-img">
                     <h3>Math</h3>
                     <p>Get Real Test Prep and Gain Advanced Mathematical skills</p>
                 </div>
                 <div class="col-lg-4 col-sm-12 left-line">
-                    <img src="Pics/icons8-pen-50.png" class="feature-img">
+                    <img src="Pics/icons8-pen-96.png" class="feature-img">
                     <h3>English</h3>
                     <p>Get Real Test Prep and critical readings skills</p>
                 </div>
@@ -115,6 +119,9 @@
                     <h3>STEM</h3>
                     <p>Get hand-on experience with STEM-based projects</p>
                 </div>
+            </div>
+            <div align="right">
+                <a class="learn-more fade" href="about.html">Learn More → </a>
             </div>
         </div>
         <div class="spacer"></div>
@@ -186,11 +193,11 @@
     <div class="container-fluid" style="max-width:80%;">
         <div class="spacer"></div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 fade">
                 <div class="left-image"></div>
                 <!--<a href='https://www.freepik.com/free-photos-vectors/school'>School vector created by pch.vector - www.freepik.com</a>-->
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 fade">
                 <h2>Listen to This!</h2>
                 <h4>Header 4</h4>
                 <p>
@@ -209,32 +216,31 @@
         <div class="spacer"></div>
 
     </div>
-    <a href="#" style="text-decoration: none;">
-        <div class="container-fluid" align="center" style="position:relative;overflow: hidden;margin:0;">
-            <div class="row">
-                <div class="triangle"></div>
-                <div class="col-lg-6 col-sm-12 signup student" style="padding: 15vh 0;">
-                    <h2>Students, Sign Up!</h2>
-                    <h4>Join Our Community</h4>
-                </div>
-                <div class="col-lg-6 col-sm-12 signup mentor" style="padding: 15vh 0;">
-                    <h2>Mentors, Sign Up!</h2>
-                    <h4>Get Real-time Experience</h4>
-                </div>
+    <div class="container-fluid" align="center" style="position:relative;overflow: hidden;margin:0;">
+        <div class="row">
+            <div class="triangle"></div>
+            <div class="col-lg-6 signup student" style="padding: 15vh 0;">
+                <h2>Students, Sign Up!</h2>
+                <h4>Join Our Community</h4>
+            </div>
+            <div class="col-lg-6 signup mentor" style="padding: 15vh 0;">
+                <h2>Mentors, Sign Up!</h2>
+                <h4>Get Real-time Experience</h4>
             </div>
         </div>
-    </a>
+    </div>
     <div class="container-fluid footer" align="left; padding:0;">
         <div class="row" align="center">
             <div class="col-sm-12">
-                <img src="Pics/facebook.png">
-                <img src="Pics/mail.png">
+                <a href="https://www.facebook.com/groups/1124646777920983">
+                    <img src="Pics/facebook.png">
+                </a>
+                <a href="mailto:lifttjhsst@gmail.com">
+                    <img src="Pics/mail.png">
+                </a>
             </div>
             <div class="col-sm-12 attribution">
-                TJSST LIFT Mentorship | 2020 <br>
-                <a target="_blank" href="https://icons8.com/icons/set/pen">Pen</a>, <a target="_blank"
-                    href="https://icons8.com/icons/set/math">Math</a> and other icons by <a target="_blank"
-                    href="https://icons8.com">Icons8</a>
+                TJSST LIFT Mentorship | 2020
             </div>
         </div>
         <div class="row" class="copyright">
@@ -248,8 +254,15 @@
 </html>
 <script>
     $(document).ready(function () {
+        $('.student').click(function () {
+            window.open("signup-mentee.html", '_self')
+        })
+        $('.mentor').click(function () {
+            window.open("signup-mentor.html", '_self')
+        })
+
         $("#slideshow > div:gt(0)").hide();
-        
+
         $('.count').each(function () {
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()
@@ -270,6 +283,21 @@
                 .end()
                 .appendTo('#slideshow');
         }, 8000);
+
+        $(window).scroll(function () {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $(".fade").each(function () {
+                /* Check the location of each desired element */
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                /* If the element is completely within bounds of the window, fade it in */
+                if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                    if ($(this).css("opacity") == 0) {
+                        $(this).fadeTo(700, 1);
+                    }
+                }
+            });
+        }).scroll(); //invoke scroll-handler on page-load
     })
     //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     //Icons made by <a href="https://www.flaticon.com/authors/popcorns-arts" title="Icon Pond">Icon Pond</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

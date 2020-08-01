@@ -15,6 +15,21 @@ rgb(0, 40, 83)
   margin: 0;
 }
 
+.learn-more{
+  text-decoration: none !important;
+  font-family: 'Raleway', sans-serif;
+  color:grey;
+  font-size: 2vh;
+  height: 3vh;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.learn-more:hover{
+  font-size: 2.1vh;
+  color:grey;
+}
+
 #slideshow { 
   margin: 0; 
   padding: 0;
@@ -60,7 +75,6 @@ rgb(0, 40, 83)
   position: relative;
   top: 20vh;
   left: 10%;
-  ;
   text-align: left;
 }
 
@@ -92,7 +106,7 @@ rgb(0, 40, 83)
   color: rgb(119, 119, 119);
   display: inline-block;
   margin: 2vh;
-  width: 78%;
+  width: 75%;
 }
 
 .intro h4 {
@@ -107,7 +121,7 @@ rgb(0, 40, 83)
   border-radius: 3vh;
 
   vertical-align: top;
-  margin: 4vh 0vh !important;
+  margin: 4vh 0vh!important;
   display: inline-block;
 }
 
@@ -220,7 +234,7 @@ rgb(0, 40, 83)
   width: 0;
   height: 0;
   margin: 0 auto;
-  border-left: 50vw solid transparent;
+  border-left: 49.52vw solid transparent;
   border-right: 50vw solid transparent;
   border-top: 10vh solid rgb(255, 255, 255);
   position: absolute;

@@ -151,7 +151,10 @@
     padding: 0 .6em;
     font-size: 1em;
     white-space: nowrap;
-    cursor: pointer
+    cursor: pointer;
+    position: absolute;
+
+
 }
 
 .fc button::-moz-focus-inner {
@@ -582,6 +585,7 @@ a.fc-more:hover {
 
 .fc-toolbar .fc-center {
     display: inline-block;
+    position: relative;
 }
 
 .fc .fc-toolbar>*>* {
