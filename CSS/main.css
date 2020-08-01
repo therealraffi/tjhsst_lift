@@ -59,10 +59,6 @@ body {
   font-size: 2vh;
 }
 
-.nav-link:hover {
-  color: rgb(255, 255, 255);
-}
-
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -238,10 +234,13 @@ p {
   background: rgba(255, 255, 255, 0);
   border: 2px solid rgb(44, 0, 163);
 }
+.form-block{
+  min-width: 50vh;
+}
 
 .form-box{
-  padding:2vh;
-  width:90%;
+  padding:2%;
+  width:100%;
 }
 
 .form label{
@@ -316,3 +315,19 @@ select{
 .footer img:hover{
   transform: scale(1.2);
 }
+
+@media (min-width: 576px) { 
+
+ }
+
+@media (min-width: 768px) { 
+
+ }
+
+@media (min-width: 992px) { 
+  
+ }
+
+@media (min-width: 1200px) { 
+  
+ }
