@@ -22,7 +22,8 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light">
         <a class="navbar-brand" href="#"><img src="Pics/tjlogo2.png"></a>
-        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,16 +56,22 @@
             </ul>
         </div>
     </nav>
+    <div class="container-fluid warning">
+        <div class="close-warning">x</div>
+        <h2>COVID-19 Update</h2>
+        <p>Due to the pandemic, several changes are being made to the program. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        <a href=# class="learn-more">Learn More</a>
+    </div>
     <header class="header container-fluid">
         <div id="slideshow">
-            <div>
-                <img src="Pics/lift.jpg">
+            <div style="background-image:url('Pics/lift.jpg');">
             </div>
-            <div>
-                <img src="Pics/banner-image.jpg">
+            <div style="background-image:url('Pics/banner-image.jpg');">
             </div>
         </div>
-        <div class="description col-lg-6 col-md-6 col-sm-12">
+        <div class="description col-lg-6">
             <h1>TJHSST LIFT<br>Mentorship</h1>
             <hr class="straight-line" align="left">
             <h3>Learning Today . . . Leading Tomorrow</h3>
@@ -120,7 +127,7 @@
                 </div>
             </div>
             <div align="right">
-                <a class="learn-more fade" href="about.html">Learn More → </a>
+                <a class="learn-more" href="curriculum.html">Learn More → </a>
             </div>
         </div>
         <div class="spacer"></div>
@@ -131,7 +138,7 @@
             <div class='row'>
                 <div class="col-lg-6">
                     <div class="box">
-                        <h4>Reached<br><span class="count">30</span><br> Schools in Virginia</h4>
+                        <h4>Reached<br><span class="count" data-value="30">0</span><br> Schools in Virginia</h4>
                         <p>We have reached several schools across Virginia and welcome anymore
                             in our region! We accommodate all students who are willing to push
                             themselves to become better learners.
@@ -140,7 +147,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="box">
-                        <h4>Over<br><span class="count">60</span><br>
+                        <h4>Over<br><span class="count" data-value="60">0</span><br>
                             Mentors and Teachers</h4>
                         <p>We have reached several schools across Virginia and welcome anymore
                             in our region! We accommodate all students who are willing to push
@@ -253,6 +260,8 @@
 </html>
 <script>
     $(document).ready(function () {
+        $(".warning").slideDown()
+
         $('.student').click(function () {
             window.open("signup-mentee.html", '_self')
         })
@@ -260,19 +269,11 @@
             window.open("signup-mentor.html", '_self')
         })
 
-        $("#slideshow > div:gt(0)").hide();
+        $(".close-warning").click(function(){
+            $(".warning").slideUp()
+        })
 
-        $('.count').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 5000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
+        $("#slideshow > div:gt(0)").hide();
 
         setInterval(function () {
             $('#slideshow > div:first-child')
@@ -294,6 +295,21 @@
                     if ($(this).css("opacity") == 0) {
                         $(this).fadeTo(700, 1);
                     }
+                }
+            });
+            $('.count').each(function () {
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                /* If the element is completely within bounds of the window, fade it in */
+                if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).data('value')
+                    }, {
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
                 }
             });
         }).scroll(); //invoke scroll-handler on page-load

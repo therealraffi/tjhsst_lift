@@ -20,6 +20,33 @@ body {
 }
 
 /*--- navigation bar ---*/
+
+.warning{
+  background-color:rgb(255, 104, 117);
+  padding: 10vh 10%;
+  display: none;
+}
+
+.warning h2{
+  color: rgb(58, 58, 58) !important;
+}
+
+.warning p{
+  color:white;
+}
+
+.warning .close-warning{
+  font-size: 3vh;
+  color:white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.warning .close-warning:hover{
+  font-size: 3vh;
+  color:rgb(102, 0, 17);
+}
+
 .navbar {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
@@ -316,12 +343,13 @@ select{
   transform: scale(1.2);
 }
 
+
 @media (min-width: 576px) { 
 
  }
 
 @media (min-width: 768px) { 
-
+  
  }
 
 @media (min-width: 992px) { 

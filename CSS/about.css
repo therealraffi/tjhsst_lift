@@ -1,7 +1,8 @@
-.intro{
-    background-image: url("../Pics/gradient-background.png");
+.intro {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25)),
+        url("../Pics/gradient-background.png");
     background-size: cover;
-    padding: 25vh 0 15vh 0;
+    padding: 25vh 0 10vh 0;
 }
 
 .intro p {
@@ -10,7 +11,7 @@
 }
 
 
-.intro .quotes{
+.intro .quotes {
     margin: 5vh;
     width: 35%;
     min-width: 50vh;
@@ -21,61 +22,77 @@
     vertical-align: top;
 }
 
-.intro .quotes h3{
+.intro .quotes h3 {
     display: inline-block;
     vertical-align: middle;
     padding: 0 3vh;
     color: rgba(74, 138, 221, 0.75);
-    
+
 }
 
-.intro .quotes .row{
+.intro .quotes .row {
     justify-content: center;
 }
 
-.intro .quotes .icon-wrap{
+.intro .quotes .icon-wrap {
     display: inline-block;
     vertical-align: middle;
     background-image: linear-gradient(to right, #7844FF, #C822FF);
     padding: 1px;
 }
 
-.intro .quotes .icon-wrap > img{
+.intro .quotes .icon-wrap>img {
     background-color: white;
 }
 
-.team{
+.team {
     padding-bottom: 10vh;
 }
 
-.team .pic-member{
-    width:18%;
+.team .pic-member {
+    width: 18%;
+    min-width: 30vh;
     margin: 2vh;
 
 }
 
-.team .pic-member h3{
-    color:rgb(92, 0, 212);
+.team .pic-member h3 {
+    color: rgb(92, 0, 212);
 }
 
-.team .pic-member img{
+.team .pic-member img {
     width: 100%;
     border-radius: 3vh;
     margin-bottom: 2vh;
 }
 
 
-.team .member{
+.team .member {
     display: inline-block;
     margin: 2vh;
     border-radius: 3vh;
-    border:2px  solid;
+    border: 2px solid;
 }
 
-.team .member h3{
+.team .member h3 {
     font-size: 3vh !important;
-    padding:1vh 3vh;
+    padding: 1vh 3vh;
 
-    color:rgb(124, 15, 187);
+    color: rgb(124, 15, 187);
 }
 
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    .left-line {
+        border-left: 1px solid rgb(194, 183, 183);
+    }
+
+    .intro {
+        background-image: url("../Pics/gradient-background.png");
+    }
+}
+
+@media (min-width: 1200px) {}
