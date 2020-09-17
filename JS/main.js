@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $(function(){
+        $('.navigation').load('nav.html')
+        $('.foot').load('footer.html')
+    })
     $(".navbar-toggler-icon").click(function () {
         $(".navbar").addClass("navbar-solid")
     })
@@ -13,9 +17,6 @@ $(document).ready(function () {
             $(".navbar").removeClass("navbar-solid")
 
         }
-
-        ////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////
 
     }).scroll();
 })

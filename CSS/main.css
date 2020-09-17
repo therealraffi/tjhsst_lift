@@ -15,36 +15,38 @@ body {
   overflow-x: hidden;
 }
 
-.fade{
+.fade {
   opacity: 1;
 }
 
 /*--- navigation bar ---*/
 
-.warning{
-  background-color:rgb(255, 104, 117);
+.warning {
+  background-color: rgb(255, 104, 117);
   padding: 10vh 10%;
   display: none;
 }
 
-.warning h2{
+.warning h2 {
   color: rgb(58, 58, 58) !important;
 }
 
-.warning p{
-  color:white;
+.warning p {
+  color: white;
 }
 
-.warning .close-warning{
+.warning .close-warning {
   font-size: 3vh;
-  color:white;
+  color: white;
   transition: 0.2s ease;
   cursor: pointer;
+  width:1.5vh;
+
 }
 
-.warning .close-warning:hover{
+.warning .close-warning:hover {
   font-size: 3vh;
-  color:rgb(102, 0, 17);
+  color: rgb(102, 0, 17);
 }
 
 .navbar {
@@ -53,7 +55,7 @@ body {
   background: transparent;
   position: fixed;
   z-index: 2;
-  font-size: 2.5vh;
+  font-size: 2vh;
   padding: 0 10%;
   width: 100%;
   transition: 0.2s ease-in-out;
@@ -68,14 +70,15 @@ body {
   width: 18vh;
 }
 
-.custom-toggler.navbar-toggler { 
-  border-color: rgb(0, 0, 0); 
-} 
-/* Setting the stroke to green using rgb values (0, 128, 0) */ 
+.custom-toggler.navbar-toggler {
+  border-color: rgb(0, 0, 0);
+}
 
-.custom-toggler .navbar-toggler-icon { 
-  background-image: url( "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
-} 
+/* Setting the stroke to green using rgb values (0, 128, 0) */
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
 .spacer {
   height: 10vh;
@@ -214,7 +217,7 @@ p {
   text-decoration: none;
 }
 
-.btn{
+.btn {
   border-radius: 1vh;
   margin: 3vh 2vh 0 0;
   padding: 1vh 2vh;
@@ -226,7 +229,7 @@ p {
   transition: 0.2s ease;
 }
 
-.btn-lg{
+.btn-lg {
   border-radius: 3vh;
   margin: 3vh 2vh 0 0;
   padding: 4vh 8vh;
@@ -261,34 +264,48 @@ p {
   background: rgba(255, 255, 255, 0);
   border: 2px solid rgb(44, 0, 163);
 }
-.form-block{
+
+.form-block {
   min-width: 50vh;
 }
 
-.form-box{
-  padding:2%;
-  width:100%;
+.form-box {
+  padding: 2%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2vh;
+
 }
 
-.form label{
-  color:rgb(71, 71, 71);
+.form-box li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2vh;
+  color:rgb(255, 47, 82);
+}
+
+.form-box strong{
+  color:rgb(219, 0, 37);
+}
+
+.form label {
+  color: rgb(71, 71, 71);
   font-size: 2vh;
   font-family: 'Raleway', sans-serif;
   margin: 0 2vh 0 0;
 }
 
-.form input{
-  border:none;
-  border-bottom:1px solid grey;
+.form input {
+  border: none;
+  border-bottom: 1px solid grey;
   font-size: 2vh;
   font-family: 'Raleway', sans-serif;
   background-color: transparent;
-  height:4vh;
-  width:100%;
+  height: 4vh;
+  width: 100%;
   padding: 1vh;
 }
 
-textarea{
+textarea {
   padding: 12px 20px;
   box-sizing: border-box;
   border: none;
@@ -300,62 +317,54 @@ textarea{
   resize: none;
 }
 
-.apply{
+.apply {
   border: none;
-  height:40vh;
+  height: 40vh;
 }
 
-.extra{
+.extra {
   height: 10vh;
 }
 
-input[type=submit]{
-  width:18vh;
-  padding:1vh;
-  margin:0 2.5%;
-  height:6vh;
-  border:2px solid rgb(71, 71, 71);
+input[type=submit] {
+  width: 18vh;
+  padding: 1vh;
+  margin: 0 2.5%;
+  height: 6vh;
+  border: 2px solid rgb(71, 71, 71);
   color: rgb(71, 71, 71);
   border-radius: 1vh;
   cursor: pointer;
   transition: all ease 0.2s;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover {
   border: white;
-  color:white;
+  color: white;
   background-color: rgb(91, 27, 165);
 }
 
-select{
+select {
   font-family: 'Raleway', sans-serif;
   font-size: 2vh;
-  padding:1vh;
+  padding: 1vh;
   border-radius: 1vh;
 
 }
 
-.footer img{
+.footer img {
   transition: 0.2s ease;
 }
 
-.footer img:hover{
+.footer img:hover {
   transform: scale(1.2);
 }
 
 
-@media (min-width: 576px) { 
+@media (min-width: 576px) {}
 
- }
+@media (min-width: 768px) {}
 
-@media (min-width: 768px) { 
-  
- }
+@media (min-width: 992px) {}
 
-@media (min-width: 992px) { 
-  
- }
-
-@media (min-width: 1200px) { 
-  
- }
+@media (min-width: 1200px) {}

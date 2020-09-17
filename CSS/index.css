@@ -23,8 +23,7 @@ rgb(0, 40, 83)
 }
 
 .learn-more:hover{
-  font-size: 2.1vh;
-  color:grey;
+  color:rgb(173, 195, 255);
 }
 
 #slideshow { 
