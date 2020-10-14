@@ -176,6 +176,7 @@ rgb(0, 40, 83)
   border-radius: 4vh;
   box-shadow: 0 0 2vh rgb(173, 173, 173);
   overflow: hidden;
+  height: 60vh;
 }
 
 .news-post img {

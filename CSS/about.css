@@ -27,6 +27,7 @@
     vertical-align: middle;
     padding: 0 3vh;
     color: rgba(74, 138, 221, 0.75);
+    font-size:2.5vh;
 
 }
 
@@ -58,6 +59,7 @@
 
 .team .pic-member h3 {
     color: rgb(92, 0, 212);
+    font-size:2.5vh;
 }
 
 .team .pic-member img {
