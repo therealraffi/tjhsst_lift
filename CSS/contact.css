@@ -3,6 +3,7 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.685), rgba(255, 255, 255, 0)),
     url("../Pics/multi-background.png");
     background-size: cover;
+    min-height: 80vh;
 }
 
 .section-1 img{

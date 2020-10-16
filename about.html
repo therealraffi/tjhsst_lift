@@ -19,7 +19,8 @@
     <div class="container-fluid intro" align="center">
         <h2>Our Mission</h2>
         <hr class="double-line">
-        <p style="font-size:2.5vh;">Our goal is to serve our middle school students and encourage and prepare them to take rigorous high school
+        <p style="font-size:2.5vh;">Our goal is to serve our middle school students and encourage and prepare them to
+            take rigorous high school
             academics. We strive to provide them with the resources to succeed academically and develop a curiosity
             towards STEM or other fields of their choosing.
         </p>
@@ -54,37 +55,42 @@
         <hr class="double-line">
         <div class="row justify-content-center">
             <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
+                <div class="img-block"><img src="Pics/jw-pic.png"></div>
                 <h3>Jay Wickliff, Teacher</h3>
             </div>
             <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
+                <div class="img-block" style='background-image:url("Pics/yp-pic.jpg");'>
+                    </div>
                 <h3>Yana Patel, <br> Mentor Leader</h3>
             </div>
             <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
+                <div class="img-block"><img src="Pics/blank-profile-orange.png"></div>
                 <h3>Dinan Elsyad, <br> Mentee Leader</h3>
             </div>
             <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
+                    <div class="img-block" style='background-image:url("Pics/aj-pic.png");'>
+                    </div>
                 <h3>Anisha Jain, <br>Activities Coordinator</h3>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
-                <h3>Harold Margeta-Cacace, <br> Tutoring Coordinator</h3>
+                <div class="img-block" style=' background-image:url("Pics/hm-pic.png");''> </div> <h3>Harold
+                    Margeta-Cacace, <br> Tutoring Coordinator</h3>
+                </div>
+                <div class="col-c pic-member">
+                    <div class="img-block"><img src="Pics/blank-profile-blue.png">
+                    </div>
+                    <h3>Raffu Khondaker, Webmaster</h3>
+                </div>
+                <div class="col-c pic-member">
+                    <div class="img-block"><img src="Pics/blank-profile.png"></div>
+                    <h3>Thomas Lu, <br>Publicist</h3>
+                </div>
             </div>
-            <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
-                <h3>Raffu Khondaker, Webmaster</h3>
-            </div>
-            <div class="col-c pic-member">
-                <img src="Pics/wonho.jpg">
-                <h3>Thomas Lu, <br> Outreach Coordinator</h3>
-            </div>
-        </div>
-        <!-- <div class="row justify-content-center">
+
+
+            <!-- <div class="row justify-content-center">
             <div class="col-c member">
                 <h3>Jay Wickliff</h3>
             </div>
@@ -181,12 +187,12 @@
                 <h3>Jay Wickliff</h3>
             </div>
         </div> -->
-    </div>
-    <div class="foot">
-    </div>
-    <script src="JS/jquery-3.2.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bosotstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="JS/main.js"></script>
+        </div>
+        <div class="foot">
+        </div>
+        <script src="JS/jquery-3.2.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bosotstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="JS/main.js"></script>
 </body>
 
 </html>
@@ -198,6 +204,7 @@
     $(document).ready(function () {
         var num1 = 90;
         var num2 = 180;
+        $(".img-block").hide()
         $(".member").each(function () {
             //rgb(187, 15, 135);
             $(this).css('border-color', 'rgb(' + num1 + ',15,' + num2 + ')')
