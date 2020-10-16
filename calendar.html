@@ -73,16 +73,21 @@
                     $('#fullCalModal').modal();
                     return false;
                 },
-                events: [{
-                    "title": "First Meeting",
-                    "allday": "false",
-                    "description": "<p>11:20: Nap time <br>12:00: Robot time<br>1:30: End</p>",
-                    "start": moment().subtract('days', 14),
-                    "end": moment().subtract('days', 14),
-                    "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
-                }, ]
+                events: [
+
+                ]
             });
         });
+        `
+        {
+            "title": "First Meeting",
+            "allday": "false",
+            "description": "<p>11:20: Nap time <br>12:00: Robot time<br>1:30: End</p>",
+            "start": moment().subtract('days', 14),
+            "end": moment().subtract('days', 14),
+            "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
+        }, 
+        `
     </script>
 </body>
 

@@ -1,6 +1,7 @@
 .section-1{
     background-image: url("../Pics/orange-pink-background.png");
     background-size: cover;
+    height: 80vh;
     padding: 25vh 0 15vh 0;
 }
 
@@ -13,5 +14,5 @@
 }
 
 h2{
-    color:#FD4E74 !important;
+    color:#25126b !important;
 }
