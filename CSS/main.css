@@ -360,34 +360,6 @@ select {
 
 }
 
-.form-button{
-  vertical-align: middle;
-  margin: 2vh 7vh;
-  border-radius: 1vh;
-  box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 61, 142, 0.842);
-  min-height: 14vh;
-  transition:0.2s ease;
-  display: flex;
-}
-
-.form-button:hover{
-  box-shadow: 0.5vh 0.5vh 0.25vh rgba(0, 0, 0, 0.5);
-  background-color: rgb(255, 61, 109);
-}
-
-.form-button a{
-  text-decoration: none !important;
-  display: inline-block;
-  font-family: 'Raleway', sans-serif;
-  font-size: 4vh;
-  width:60%;
-  height: 100%;;
-  margin: auto;
-  color:white;
-  cursor: pointer;
-}
-
 .footer img {
   transition: 0.2s ease;
 }
