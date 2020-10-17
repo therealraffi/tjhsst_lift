@@ -14,8 +14,44 @@
 </head>
 
 <body>
-    <div class='navigation'>
-    </div>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="Pics/tjlogo2.png"></a>
+        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="curriculum.html">Curriculum</a>
+                </li>
+                <!-- <li class="nav-item active dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Signup
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="signup-mentor.html">Mentor</a>
+                            </div>
+                        </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Calendar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container-fluid intro" align="center">
         <h2>Our Mission</h2>
         <hr class="double-line">
@@ -60,7 +96,7 @@
             </div>
             <div class="col-c pic-member">
                 <div class="img-block" style='background-image:url("Pics/yp-pic.jpg");'>
-                    </div>
+                </div>
                 <h3>Yana Patel, <br> Mentor Leader</h3>
             </div>
             <div class="col-c pic-member">
@@ -68,8 +104,8 @@
                 <h3>Dinan Elsyad, <br> Mentee Leader</h3>
             </div>
             <div class="col-c pic-member">
-                    <div class="img-block" style='background-image:url("Pics/aj-pic.png");'>
-                    </div>
+                <div class="img-block" style='background-image:url("Pics/aj-pic.png");'>
+                </div>
                 <h3>Anisha Jain, <br>Activities Coordinator</h3>
             </div>
         </div>
@@ -188,7 +224,22 @@
             </div>
         </div> -->
         </div>
-        <div class="foot">
+        <div class="container-fluid footer" align="left; padding:0;">
+                <div class="row" align="center">
+                    <div class="col-sm-12">
+                        <a href="https://www.facebook.com/groups/1124646777920983" target=' _blank'>
+                    <img src="Pics/facebook.png">
+                    </a>
+                    <a href="mailto:lifttjhsst@gmail.com">
+                        <img src="Pics/mail.png">
+                    </a>
+                </div>
+                <div class="col-sm-12 attribution">
+                    TJHSST LIFT Mentorship | 2020
+                </div>
+            </div>
+            <div class="row" class="copyright">
+            </div>
         </div>
         <script src="JS/jquery-3.2.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bosotstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -207,9 +258,8 @@
         $(".img-block").hide()
         $(".member").each(function () {
             //rgb(187, 15, 135);
-            $(this).css('border-color', 'rgb(' + num1 + ',15,' + num2 + ')')
-            $(this).children('h3').css('color', 'rgb(' + num1 + ',15,' + num2 + ')')
-            if (num1 < 180) {
+            $(this).css(' border-color', 'rgb(' + num1 + ',15,' + num2 + ')')
+            $(this).children('h3').css('color', 'rgb(' + num1 + ',15,' + num2 + ')') if (num1 < 180) {
                 num1 = num1 + 8;
             } else {
                 num2 = num2 - 8;
