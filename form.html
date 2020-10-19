@@ -52,10 +52,18 @@
             </ul>
         </div>
     </nav>
+    <div id="data" />
     <div class="section-1" align="center">
         <h2 style="color:blue">Forms</h2>
         <hr class="double-line">
-        <div class="row" align="center">
+        <p class="intro">
+            Thanks for your interest in LIFT! You can sign up to be a mentor below, as well as optionally apply to be an
+            activities committee member (please do so by 10/22!). For the regular mentor application, we take mentors at
+            any point in the year, but we strongly encourage you to apply as soon as you can--it's important for getting
+            to know your mentees.
+
+        </p>
+        <!-- <div class="row rblock" align="center">
             <div class="col-lg-6 col-sm-12">
                 <div class="form-button">
                     <a target="_blank"
@@ -75,7 +83,7 @@
                         Committee Application</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="container-fluid footer" align="left; padding:0;">
         <div class="row" align="center">
@@ -100,7 +108,50 @@
     <script src="JS/curriculum.js"></script>
 </body>
 <script>
-    $("#main-form").hide()
+    function doData(json) {
+        spData = json.feed.entry;
+    }
+
+    function readData(parent) {
+        var data = spData;
+        var rowData = [];
+        var events = []
+        //col 1: data
+        //col 2: time start
+        //col 3: time end
+        //col 4: activities
+        //"<p>11:20: Nap time <br>12:00: Robot time<br>1:30: End</p>"
+        //<p>Time: 12:00:00 AM to 1:00:00 PM<br>1:00:00 PM<br></p>
+        console.log(data)
+        var str = ""
+        for (var r = 2; r < data.length; r += 2) {
+            try {
+                var name = data[r]["gs$cell"]["$t"]
+                var link = data[r+1]["gs$cell"]['$t']
+                str += `
+                <div class="col-lg-6 col-sm-12">
+                    <div class="form-button">
+                        <a target="_blank"
+                            href="` + link + `">` + name + `</a>
+                    </div>
+                </div>
+                `
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        str = "<div class='row'>" + str + "</div>"
+        $(".section-1").append(str)
+    }
+
+    $(document).ready(function () {
+        data = readData($("#data"));
+        console.log(data)
+
+    });
+</script>
+<script
+    src="https://spreadsheets.google.com/feeds/cells/1-bSy7g4HpUqQSwRO6fekAtUAxbm0-pNE3I5iPwmrD8o/1/public/values?alt=json-in-script&callback=doData">
 </script>
 
 </html>

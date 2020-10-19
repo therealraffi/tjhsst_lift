@@ -125,34 +125,37 @@
             //<p>Time: 12:00:00 AM to 1:00:00 PM<br>1:00:00 PM<br></p>
             console.log(data)
             for (var r = 4; r < data.length; r += 4) {
-                var day = {}
-                var d1 = data[r]["gs$cell"]["$t"]
-                var t1 = data[r + 1]["gs$cell"]['$t']
-                var t2 = data[r + 2]["gs$cell"]['$t']
-                var start = d1 + " " + t1
-                var end = d1 + " " + t2
-                var m1 = moment(start).format('MM/DD/YYYY hh:mm A')
-                var m2 = moment(end).format('MM/DD/YYYY hh:mm A')
-                console.log(m1)
-                var activity = data[r + 3]["gs$cell"]["$t"].split(",")
-                var title = d1 + " Meeting"
-                var desc = "<p> Activites:  <br>"
-                for (i = 0; i < activity.length; i++) {
-                    desc += activity[i] + "<br>"
-                } 
-                desc+="</p>"
-                console.log(desc)
-                day = {
-                    "title": "" + t1 + " to " + t2,
-                    "allday": "false",
-                    "description": desc,
-                    "start":  m1,
-                    "end":  m2,
-                    "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
+                try{
+                    var day = {}
+                    var d1 = data[r]["gs$cell"]["$t"]
+                    var t1 = data[r + 1]["gs$cell"]['$t']
+                    var t2 = data[r + 2]["gs$cell"]['$t']
+                    var start = d1 + " " + t1
+                    var end = d1 + " " + t2
+                    var m1 = moment(start).format('MM/DD/YYYY hh:mm A')
+                    var m2 = moment(end).format('MM/DD/YYYY hh:mm A')
+                    var activity = data[r + 3]["gs$cell"]["$t"].split(",")
+                    var title = d1 + " Meeting"
+                    var desc = "<p> <u>Activites:</u>  <br>"
+                    for (i = 0; i < activity.length; i++) {
+                        desc += activity[i] + "<br>"
+                    } 
+                    desc+="</p>"
+                    day = {
+                        "title": "" + t1 + " to " + t2,
+                        "allday": "false",
+                        "description": desc,
+                        "start":  m1,
+                        "end":  m2,
+                        "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
+                    }
+                    events.push(day)
+                    //var cell = data[r]["gs$cell"];
+                    //var val = cell["$t"];
                 }
-                events.push(day)
-                //var cell = data[r]["gs$cell"];
-                //var val = cell["$t"];
+                catch(err){
+                    console.log(err)
+                }
             }
             return events
         }
