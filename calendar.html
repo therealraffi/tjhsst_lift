@@ -57,6 +57,7 @@
             </ul>
         </div>
     </nav>
+    <div id="data" />
     <div class="container-fluid calendar-block">
         <div class="container">
             <div class="row">
@@ -108,9 +109,59 @@
     <script src="JS/main.js"></script>
 
     <script>
+        function doData(json) {
+            spData = json.feed.entry;
+        }
+
+        function readData(parent) {
+            var data = spData;
+            var rowData = [];
+            var events = []
+            //col 1: data
+            //col 2: time start
+            //col 3: time end
+            //col 4: activities
+            //"<p>11:20: Nap time <br>12:00: Robot time<br>1:30: End</p>"
+            //<p>Time: 12:00:00 AM to 1:00:00 PM<br>1:00:00 PM<br></p>
+            console.log(data)
+            for (var r = 4; r < data.length; r += 4) {
+                var day = {}
+                var d1 = data[r]["gs$cell"]["$t"]
+                var t1 = data[r + 1]["gs$cell"]['$t']
+                var t2 = data[r + 2]["gs$cell"]['$t']
+                var start = d1 + " " + t1
+                var end = d1 + " " + t2
+                var m1 = moment(start).format('MM/DD/YYYY hh:mm A')
+                var m2 = moment(end).format('MM/DD/YYYY hh:mm A')
+                console.log(m1)
+                var activity = data[r + 3]["gs$cell"]["$t"].split(",")
+                var title = d1 + " Meeting"
+                var desc = "<p> Activites:  <br>"
+                for (i = 0; i < activity.length; i++) {
+                    desc += activity[i] + "<br>"
+                } 
+                desc+="</p>"
+                console.log(desc)
+                day = {
+                    "title": "" + t1 + " to " + t2,
+                    "allday": "false",
+                    "description": desc,
+                    "start":  m1,
+                    "end":  m2,
+                    "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
+                }
+                events.push(day)
+                //var cell = data[r]["gs$cell"];
+                //var val = cell["$t"];
+            }
+            return events
+        }
+
         $(document).ready(function () {
-            //format
-            var m = moment('July 23 2020 9:32 PM').format('LLL')
+            data = readData($("#data"));
+            console.log(data)
+
+            //var m = moment('July 23 2020 9:32 PM').format('l')
             $('#bootstrapModalFullCalendar').fullCalendar({
                 header: {
                     left: '',
@@ -124,9 +175,7 @@
                     $('#fullCalModal').modal();
                     return false;
                 },
-                events: [
-                
-                ]
+                events: data
             });
         });
         `
@@ -139,6 +188,9 @@
                     "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
                 }, 
         `
+    </script>
+    <script
+        src="https://spreadsheets.google.com/feeds/cells/1Aq9pcm2z4QOPF2Fiexp9FWEeIVgX-r51gfA6tBMHwRc/1/public/values?alt=json-in-script&callback=doData">
     </script>
 </body>
 

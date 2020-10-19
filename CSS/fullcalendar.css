@@ -528,7 +528,8 @@ hr.fc-divider {
 }
 
 .fc-day-grid-event .fc-time {
-    font-weight: 700
+    font-weight: 700;
+    display: none;
 }
 
 .fc-day-grid-event .fc-resizer {
@@ -849,7 +850,7 @@ a.fc-more:hover {
 
 .fc-time-grid-event .fc-time,
 .fc-time-grid-event .fc-title {
-    padding: 0 1px
+    padding: 0 5px
 }
 
 .fc-time-grid-event .fc-time {
