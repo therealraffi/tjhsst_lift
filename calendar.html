@@ -16,9 +16,31 @@
     <link rel="stylesheet" type="text/css" href="CSS/calendar.css" />
     <link rel="stylesheet" type="text/css" href="CSS/main.css" />
     <link rel="icon" type="image/x-icon" href="Pics/lift-icon.png">
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MWZGG3H');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWZGG3H" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar navbar-expand-md navbar-light">
         <a class="navbar-brand" href="index.html"><img src="Pics/tjlogo2.png"></a>
         <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
@@ -125,7 +147,7 @@
             //<p>Time: 12:00:00 AM to 1:00:00 PM<br>1:00:00 PM<br></p>
             console.log(data)
             for (var r = 4; r < data.length; r += 4) {
-                try{
+                try {
                     var day = {}
                     var d1 = data[r]["gs$cell"]["$t"]
                     var t1 = data[r + 1]["gs$cell"]['$t']
@@ -139,21 +161,20 @@
                     var desc = "<p> <u>Activites:</u>  <br>"
                     for (i = 0; i < activity.length; i++) {
                         desc += activity[i] + "<br>"
-                    } 
-                    desc+="</p>"
+                    }
+                    desc += "</p>"
                     day = {
                         "title": "" + t1 + " to " + t2,
                         "allday": "false",
                         "description": desc,
-                        "start":  m1,
-                        "end":  m2,
+                        "start": m1,
+                        "end": m2,
                         "url": "http://www.mikesmithdev.com/blog/coding-without-music-vs-coding-with-music/"
                     }
                     events.push(day)
                     //var cell = data[r]["gs$cell"];
                     //var val = cell["$t"];
-                }
-                catch(err){
+                } catch (err) {
                     console.log(err)
                 }
             }
